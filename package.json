@@ -1,15 +1,31 @@
 {
   "name": "@dori/utils",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "main": "dist/bundle/dori-utils.js",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "require": "./dist/bundle/dori-utils.cjs",
+      "import": "./dist/bundle/dori-utils.js"
+    }
+  },
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "devDependencies": {
+    "@types/node": "^24.3.0",
     "typescript": "~5.8.3",
-    "vite": "^7.1.2"
+    "vite": "^7.1.2",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "@dori/utils": "file:dori-utils-0.0.1.tgz",
+    "@vitest/coverage-v8": "^3.2.4"
   }
 }

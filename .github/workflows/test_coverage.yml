@@ -1,6 +1,6 @@
 # .github/workflows/test_coverage.yml
 
-name: 'Run Test Case'
+name: "Run Test Case"
 
 # PR 생성시에만 해당 워크플로우를 실행해요
 on: pull_request
@@ -15,11 +15,20 @@ jobs:
       - name: 노드 설치
         uses: actions/setup-node@v3
         with:
-          node-version: '20.12.0'
-      - run: npm ci
-      - run: npx vitest --coverage
-      - name: 테스트 커버리지 결과 PR에 코멘트 추가하기
+          node-version: "20.12.0"
+      - name: pnpm 설치
+        run: npm install -g pnpm
+      - run: pnpm install
+      - run: pnpm test -- --reporter=junit --outputFile=vitest-report.xml
+      - run: pnpm coverage -- package/**/*.test.ts
+      - name: 테스트 결과 PR에 코멘트 추가하기
+        uses: test-summary/action@v2
+        with:
+          paths: /home/runner/work/utils/utils/vitest-report.xml
+          github-token: ${{ secrets.PR_WRITE_TOKEN }}
         if: always()
+      - name: 테스트 커버리지 결과 PR에 코멘트 추가하기
         uses: davelosert/vitest-coverage-report-action@v2
         with:
           github-token: ${{ secrets.PR_WRITE_TOKEN }}
+        if: always()
