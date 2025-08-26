@@ -24,7 +24,7 @@ jobs:
       - name: 테스트 결과 PR에 코멘트 추가하기
         uses: test-summary/action@v2
         with:
-          paths: vitest-report.xml
+          paths: /home/runner/work/utils/utils/vitest-report.xml
           github-token: ${{ secrets.PR_WRITE_TOKEN }}
       - name: 테스트 커버리지 결과 PR에 코멘트 추가하기
         uses: davelosert/vitest-coverage-report-action@v2
