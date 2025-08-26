@@ -25,6 +25,7 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@dori/utils": "file:dori-utils-0.0.1.tgz"
+    "@dori/utils": "file:dori-utils-0.0.1.tgz",
+    "@vitest/coverage-v8": "^3.2.4"
   }
 }
