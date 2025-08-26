@@ -19,7 +19,7 @@ jobs:
       - name: pnpm 설치
         run: npm install -g pnpm
       - run: pnpm install
-      - run: pnpm coverage
+      - run: pnpm coverage -- package/**/*.test.ts
       - name: 테스트 커버리지 결과 PR에 코멘트 추가하기
         if: always()
         uses: davelosert/vitest-coverage-report-action@v2
