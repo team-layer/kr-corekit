@@ -26,7 +26,9 @@ jobs:
         with:
           paths: /home/runner/work/utils/utils/vitest-report.xml
           github-token: ${{ secrets.PR_WRITE_TOKEN }}
+        if: always()
       - name: 테스트 커버리지 결과 PR에 코멘트 추가하기
         uses: davelosert/vitest-coverage-report-action@v2
         with:
           github-token: ${{ secrets.PR_WRITE_TOKEN }}
+        if: always()
