@@ -1,12 +1,7 @@
 export default function checkHttpUrl(str: string): boolean {
-  const roughPattern = /^(https?:\/\/)/i;
-
-  if (!roughPattern.test(str)) return false;
-
   try {
-    new URL(str);
-
-    return true;
+    const url = new URL(str);
+    return url.protocol === "http:" || url.protocol === "https:";
   } catch {
     return false;
   }
