@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites name="vitest tests" tests="6" failures="0" errors="0" time="0.007950624">
-    <testsuite name="package/objectUtil/clearNullProperties/index.test.ts" timestamp="2025-08-26T12:35:24.382Z" hostname="klmhyeonwooui-MacBookPro.local" tests="1" failures="0" errors="0" skipped="0" time="0.00169225">
-        <testcase classname="package/objectUtil/clearNullProperties/index.test.ts" name="만약 Null이 객체에 존재한다면, Null이 없는 객체가 반환된다." time="0.001107583">
+<testsuites name="vitest tests" tests="10" failures="0" errors="0" time="0.0078695">
+    <testsuite name="package/objectUtil/clearNullProperties/index.test.ts" timestamp="2025-08-27T00:35:02.147Z" hostname="users-MacBook-Pro.local" tests="1" failures="0" errors="0" skipped="0" time="0.001491875">
+        <testcase classname="package/objectUtil/clearNullProperties/index.test.ts" name="만약 Null이 객체에 존재한다면, Null이 없는 객체가 반환된다." time="0.000944958">
         </testcase>
     </testsuite>
-    <testsuite name="package/objectUtil/deepFreeze/index.test.ts" timestamp="2025-08-26T12:35:24.383Z" hostname="klmhyeonwooui-MacBookPro.local" tests="1" failures="0" errors="0" skipped="0" time="0.00167025">
-        <testcase classname="package/objectUtil/deepFreeze/index.test.ts" name="객체의 불변성이 유지된다." time="0.000886042">
+    <testsuite name="package/objectUtil/deepFreeze/index.test.ts" timestamp="2025-08-27T00:35:02.148Z" hostname="users-MacBook-Pro.local" tests="1" failures="0" errors="0" skipped="0" time="0.001265125">
+        <testcase classname="package/objectUtil/deepFreeze/index.test.ts" name="객체의 불변성이 유지된다." time="0.000742375">
         </testcase>
     </testsuite>
-    <testsuite name="package/numberUtil/sum/index.test.ts" timestamp="2025-08-26T12:35:24.383Z" hostname="klmhyeonwooui-MacBookPro.local" tests="2" failures="0" errors="0" skipped="0" time="0.0014215">
-        <testcase classname="package/numberUtil/sum/index.test.ts" name="1 + 2 + 3은 6이다." time="0.000809542">
+    <testsuite name="package/numberUtil/subtract/index.test.ts" timestamp="2025-08-27T00:35:02.149Z" hostname="users-MacBook-Pro.local" tests="4" failures="0" errors="0" skipped="0" time="0.001365541">
+        <testcase classname="package/numberUtil/subtract/index.test.ts" name="2 - 1은 1이다." time="0.000675792">
         </testcase>
-        <testcase classname="package/numberUtil/sum/index.test.ts" name="5 + 10 + 15는 30이다." time="0.000085417">
+        <testcase classname="package/numberUtil/subtract/index.test.ts" name="5 - 10 - 15는 -20이다." time="0.000068208">
+        </testcase>
+        <testcase classname="package/numberUtil/subtract/index.test.ts" name="-1 - (-2)는 1이다." time="0.000055125">
+        </testcase>
+        <testcase classname="package/numberUtil/subtract/index.test.ts" name="인자 없는 경우 0을 반환한다." time="0.000058917">
         </testcase>
     </testsuite>
-    <testsuite name="package/stringUtil/escapeHtml/index.test.ts" timestamp="2025-08-26T12:35:24.384Z" hostname="klmhyeonwooui-MacBookPro.local" tests="1" failures="0" errors="0" skipped="0" time="0.001762458">
-        <testcase classname="package/stringUtil/escapeHtml/index.test.ts" name="HTML 특수 문자를 이스케이프한다." time="0.001013792">
+    <testsuite name="package/numberUtil/sum/index.test.ts" timestamp="2025-08-27T00:35:02.150Z" hostname="users-MacBook-Pro.local" tests="2" failures="0" errors="0" skipped="0" time="0.0013085">
+        <testcase classname="package/numberUtil/sum/index.test.ts" name="1 + 2 + 3은 6이다." time="0.000696375">
+        </testcase>
+        <testcase classname="package/numberUtil/sum/index.test.ts" name="5 + 10 + 15는 30이다." time="0.000073666">
         </testcase>
     </testsuite>
-    <testsuite name="package/stringUtil/unescapeHtml/index.test.ts" timestamp="2025-08-26T12:35:24.384Z" hostname="klmhyeonwooui-MacBookPro.local" tests="1" failures="0" errors="0" skipped="0" time="0.001404166">
-        <testcase classname="package/stringUtil/unescapeHtml/index.test.ts" name="HTML 특수 문자를 언이스케이프한다." time="0.000838083">
+    <testsuite name="package/stringUtil/escapeHtml/index.test.ts" timestamp="2025-08-27T00:35:02.150Z" hostname="users-MacBook-Pro.local" tests="1" failures="0" errors="0" skipped="0" time="0.00125">
+        <testcase classname="package/stringUtil/escapeHtml/index.test.ts" name="HTML 특수 문자를 이스케이프한다." time="0.000713334">
+        </testcase>
+    </testsuite>
+    <testsuite name="package/stringUtil/unescapeHtml/index.test.ts" timestamp="2025-08-27T00:35:02.150Z" hostname="users-MacBook-Pro.local" tests="1" failures="0" errors="0" skipped="0" time="0.001188459">
+        <testcase classname="package/stringUtil/unescapeHtml/index.test.ts" name="HTML 특수 문자를 언이스케이프한다." time="0.000659959">
         </testcase>
     </testsuite>
 </testsuites>
