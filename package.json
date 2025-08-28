@@ -16,6 +16,7 @@
     "object-utils",
     "functional",
     "core-kit",
+    "corekit",
     "esm",
     "cjs"
   ],
