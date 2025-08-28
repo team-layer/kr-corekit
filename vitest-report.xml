@@ -1,37 +1,109 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites name="vitest tests" tests="16" failures="0" errors="0" time="0.002133542">
-    <testsuite name="package/validationUtil/checkHttpUrl/index.test.ts" timestamp="2025-08-27T08:47:10.603Z" hostname="users-MacBook-Pro.local" tests="16" failures="0" errors="0" skipped="0" time="0.002133542">
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;http://example.com&apos;에 대해 true를 반환한다" time="0.000729292">
+<testsuites name="vitest tests" tests="44" failures="0" errors="0" time="0.017792002">
+    <testsuite name="package/commonUtil/isEmpty/index.test.ts" timestamp="2025-08-28T13:04:50.780Z" hostname="klmhyeonwooui-MacBookPro.local" tests="16" failures="0" errors="0" skipped="0" time="0.003805083">
+        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 비어있지 않은 값에 대해 false를 반환해야 함 &gt; 비어있지 않은 문자열에 대해 false를 반환한다" time="0.000873">
         </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;https://example.com&apos;에 대해 true를 반환한다" time="0.0001035">
+        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 비어있지 않은 값에 대해 false를 반환해야 함 &gt; 0이 아닌 숫자에 대해 false를 반환한다" time="0.00025275">
         </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;https://www.example.com&apos;에 대해 true를 반환한다" time="0.000051375">
+        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 비어있지 않은 값에 대해 false를 반환해야 함 &gt; 비어있지 않은 배열에 대해 false를 반환한다" time="0.00021675">
         </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;http://example.com/path/to/resource&apos;에 대해 true를 반환한다" time="0.000051875">
+        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 비어있지 않은 값에 대해 false를 반환해야 함 &gt; 0에 대해 false를 반환한다" time="0.000082084">
         </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;https://example.com?query=123&amp;key=value&apos;에 대해 true를 반환한다" time="0.000052833">
+        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 비어있지 않은 값에 대해 false를 반환해야 함 &gt; 비어있지 않은 객체에 대해 false를 반환한다" time="0.000190541">
         </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;http://localhost:3000&apos;에 대해 true를 반환한다" time="0.000047542">
+        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 비어있지 않은 값에 대해 false를 반환해야 함 &gt; 불린 값에 대해 false를 반환한다" time="0.000070958">
         </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;https://sub.domain.co.uk/page#section&apos;에 대해 true를 반환한다" time="0.00004075">
+        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 빈 값에 대해 true를 반환해야 함 &gt; 빈 문자열에 대해 true를 반환한다" time="0.000052917">
         </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;www.example.com&apos;에 대해 false를 반환한다" time="0.000048916">
+        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 빈 값에 대해 true를 반환해야 함 &gt; 빈 배열에 대해 true를 반환한다" time="0.000047791">
         </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;example.com&apos;에 대해 false를 반환한다" time="0.000043208">
+        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 빈 값에 대해 true를 반환해야 함 &gt; 빈 객체에 대해 true를 반환한다" time="0.00012825">
         </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;/relative/path&apos;에 대해 false를 반환한다" time="0.00005725">
+        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 빈 값에 대해 true를 반환해야 함 &gt; null과 undefined에 대해 true를 반환한다" time="0.000163333">
         </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;ftp://example.com&apos;에 대해 false를 반환한다" time="0.000036584">
+        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 엣지 케이스 &gt; NaN을 처리한다" time="0.000051667">
         </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;mailto:test@example.com&apos;에 대해 false를 반환한다" time="0.000029167">
+        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 엣지 케이스 &gt; Date 객체를 처리한다" time="0.00006475">
         </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;http:// example.com&apos;에 대해 false를 반환한다" time="0.000047292">
+        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 엣지 케이스 &gt; Set과 Map을 처리한다" time="0.000097125">
         </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;https://&apos;에 대해 false를 반환한다" time="0.000043291">
+        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 엣지 케이스 &gt; 함수를 처리한다" time="0.000347208">
         </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;just a random string&apos;에 대해 false를 반환한다" time="0.000024416">
+        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 엣지 케이스 &gt; 심볼을 처리한다" time="0.000139542">
         </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;&apos;에 대해 false를 반환한다" time="0.000033208">
+        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 엣지 케이스 &gt; 빈 심볼의 경우 true를 반환한다" time="0.000064084">
+        </testcase>
+    </testsuite>
+    <testsuite name="package/numberUtil/sum/index.test.ts" timestamp="2025-08-28T13:04:50.785Z" hostname="klmhyeonwooui-MacBookPro.local" tests="2" failures="0" errors="0" skipped="0" time="0.001441459">
+        <testcase classname="package/numberUtil/sum/index.test.ts" name="1 + 2 + 3은 6이다." time="0.000816583">
+        </testcase>
+        <testcase classname="package/numberUtil/sum/index.test.ts" name="5 + 10 + 15는 30이다." time="0.000089166">
+        </testcase>
+    </testsuite>
+    <testsuite name="package/objectUtil/clearNullProperties/index.test.ts" timestamp="2025-08-28T13:04:50.786Z" hostname="klmhyeonwooui-MacBookPro.local" tests="1" failures="0" errors="0" skipped="0" time="0.001685916">
+        <testcase classname="package/objectUtil/clearNullProperties/index.test.ts" name="만약 Null이 객체에 존재한다면, Null이 없는 객체가 반환된다." time="0.001101542">
+        </testcase>
+    </testsuite>
+    <testsuite name="package/stringUtil/escapeHtml/index.test.ts" timestamp="2025-08-28T13:04:50.786Z" hostname="klmhyeonwooui-MacBookPro.local" tests="1" failures="0" errors="0" skipped="0" time="0.001320292">
+        <testcase classname="package/stringUtil/escapeHtml/index.test.ts" name="HTML 특수 문자를 이스케이프한다." time="0.000803667">
+        </testcase>
+    </testsuite>
+    <testsuite name="package/objectUtil/deepFreeze/index.test.ts" timestamp="2025-08-28T13:04:50.786Z" hostname="klmhyeonwooui-MacBookPro.local" tests="1" failures="0" errors="0" skipped="0" time="0.0013685">
+        <testcase classname="package/objectUtil/deepFreeze/index.test.ts" name="객체의 불변성이 유지된다." time="0.000847083">
+        </testcase>
+    </testsuite>
+    <testsuite name="package/validationUtil/checkEmail/index.test.ts" timestamp="2025-08-28T13:04:50.786Z" hostname="klmhyeonwooui-MacBookPro.local" tests="2" failures="0" errors="0" skipped="0" time="0.001490959">
+        <testcase classname="package/validationUtil/checkEmail/index.test.ts" name="올바른 이메일인 경우 true 값을 리턴합니다." time="0.000839292">
+        </testcase>
+        <testcase classname="package/validationUtil/checkEmail/index.test.ts" name="올바르지 않은 이메일인 경우 false 값을 리턴합니다." time="0.000126625">
+        </testcase>
+    </testsuite>
+    <testsuite name="package/stringUtil/unescapeHtml/index.test.ts" timestamp="2025-08-28T13:04:50.787Z" hostname="klmhyeonwooui-MacBookPro.local" tests="1" failures="0" errors="0" skipped="0" time="0.001326167">
+        <testcase classname="package/stringUtil/unescapeHtml/index.test.ts" name="HTML 특수 문자를 언이스케이프한다." time="0.000801291">
+        </testcase>
+    </testsuite>
+    <testsuite name="package/validationUtil/checkHttpUrl/index.test.ts" timestamp="2025-08-28T13:04:50.787Z" hostname="klmhyeonwooui-MacBookPro.local" tests="16" failures="0" errors="0" skipped="0" time="0.003389959">
+        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;http://example.com&apos;에 대해 true를 반환한다" time="0.0008375">
+        </testcase>
+        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;https://example.com&apos;에 대해 true를 반환한다" time="0.000088167">
+        </testcase>
+        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;https://www.example.com&apos;에 대해 true를 반환한다" time="0.000195">
+        </testcase>
+        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;http://example.com/path/to/resource&apos;에 대해 true를 반환한다" time="0.000084583">
+        </testcase>
+        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;https://example.com?query=123&amp;key=value&apos;에 대해 true를 반환한다" time="0.000156667">
+        </testcase>
+        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;http://localhost:3000&apos;에 대해 true를 반환한다" time="0.000053959">
+        </testcase>
+        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;https://sub.domain.co.uk/page#section&apos;에 대해 true를 반환한다" time="0.000045708">
+        </testcase>
+        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;www.example.com&apos;에 대해 false를 반환한다" time="0.000118417">
+        </testcase>
+        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;example.com&apos;에 대해 false를 반환한다" time="0.000228833">
+        </testcase>
+        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;/relative/path&apos;에 대해 false를 반환한다" time="0.000086">
+        </testcase>
+        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;ftp://example.com&apos;에 대해 false를 반환한다" time="0.000052958">
+        </testcase>
+        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;mailto:test@example.com&apos;에 대해 false를 반환한다" time="0.000039959">
+        </testcase>
+        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;http:// example.com&apos;에 대해 false를 반환한다" time="0.0001175">
+        </testcase>
+        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;https://&apos;에 대해 false를 반환한다" time="0.000259125">
+        </testcase>
+        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;just a random string&apos;에 대해 false를 반환한다" time="0.00006525">
+        </testcase>
+        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;&apos;에 대해 false를 반환한다" time="0.000102334">
+        </testcase>
+    </testsuite>
+    <testsuite name="package/numberUtil/subtract/index.test.ts" timestamp="2025-08-28T13:04:50.790Z" hostname="klmhyeonwooui-MacBookPro.local" tests="4" failures="0" errors="0" skipped="0" time="0.001963667">
+        <testcase classname="package/numberUtil/subtract/index.test.ts" name="2 - 1은 1이다." time="0.000906458">
+        </testcase>
+        <testcase classname="package/numberUtil/subtract/index.test.ts" name="5 - 10 - 15는 -20이다." time="0.000089583">
+        </testcase>
+        <testcase classname="package/numberUtil/subtract/index.test.ts" name="-1 - (-2)는 1이다." time="0.000149125">
+        </testcase>
+        <testcase classname="package/numberUtil/subtract/index.test.ts" name="인자 없는 경우 0을 반환한다." time="0.000071583">
         </testcase>
     </testsuite>
 </testsuites>
