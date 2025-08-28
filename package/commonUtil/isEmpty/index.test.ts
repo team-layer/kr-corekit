@@ -24,6 +24,10 @@ describe("isEmpty 유틸 함수 테스트", () => {
       expect(isEmpty([undefined])).toBe(false);
     });
 
+    test("0에 대해 false를 반환한다", () => {
+      expect(isEmpty(0)).toBe(false);
+    });
+
     test("비어있지 않은 객체에 대해 false를 반환한다", () => {
       expect(isEmpty({ a: 1 })).toBe(false);
       expect(isEmpty({ foo: "bar" })).toBe(false);
@@ -40,10 +44,6 @@ describe("isEmpty 유틸 함수 테스트", () => {
   describe("빈 값에 대해 true를 반환해야 함", () => {
     test("빈 문자열에 대해 true를 반환한다", () => {
       expect(isEmpty("")).toBe(true);
-    });
-
-    test("0에 대해 true를 반환한다", () => {
-      expect(isEmpty(0)).toBe(true);
     });
 
     test("빈 배열에 대해 true를 반환한다", () => {
