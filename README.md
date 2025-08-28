@@ -1,4 +1,4 @@
-# corekit
+# core-kit
 
 A comprehensive collection of TypeScript utility functions for modern web development.
 
@@ -13,11 +13,11 @@ A comprehensive collection of TypeScript utility functions for modern web develo
 ## Installation
 
 ```bash
-npm install corekit
+npm install core-kit
 # or
-pnpm add corekit
+pnpm add core-kit
 # or
-yarn add corekit
+yarn add core-kit
 ```
 
 ## Usage
@@ -30,7 +30,7 @@ import {
   numberUtil,
   validationUtil,
   commonUtil,
-} from "corekit";
+} from "core-kit";
 
 // String utilities
 const escaped = stringUtil.escapeHtml("<div>Hello</div>");
