@@ -8,7 +8,7 @@ A comprehensive collection of TypeScript utility functions for modern web develo
 - 📦 **Tree-shakable**: Import only what you need
 - 🔒 **Type-safe**: Full TypeScript support with type definitions
 - ⚡ **Lightweight**: Minimal dependencies and optimized for performance
-- 🧪 **Well-tested**: 100% test coverage with comprehensive test cases
+- 🧪 **Well-tested**: Extensive test coverage with comprehensive test cases
 
 ## Installation
 
