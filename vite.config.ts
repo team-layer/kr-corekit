@@ -14,7 +14,7 @@ export default defineConfig({
     lib: {
       entry: "package/index.ts",
       name: "DoriUtils",
-      fileName: "dori-utils",
+      fileName: "corekit",
     },
   },
 });
