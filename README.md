@@ -67,7 +67,7 @@ const theme = cookieUtil.getCookie("theme");
 ### NumberUtil
 
 - `sum(...numbers: number[]): number` - Calculates sum of numbers
-- `subtract(a: number, b: number): number` - Subtracts two numbers
+- `subtract(...numbers: number[]): number` - Subtracts two numbers
 
 ### ValidationUtil
 
