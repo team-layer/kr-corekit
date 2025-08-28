@@ -13,8 +13,8 @@ export default defineConfig({
     outDir: "dist/bundle",
     lib: {
       entry: "package/index.ts",
-      name: "core-kit",
-      fileName: "core-kit",
+      name: "kr-corekit",
+      fileName: "kr-corekit",
     },
   },
 });
