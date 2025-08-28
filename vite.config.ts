@@ -13,8 +13,8 @@ export default defineConfig({
     outDir: "dist/bundle",
     lib: {
       entry: "package/index.ts",
-      name: "DoriUtils",
-      fileName: "dori-utils",
+      name: "corekit",
+      fileName: "corekit",
     },
   },
 });

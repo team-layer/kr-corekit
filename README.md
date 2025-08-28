@@ -1,10 +1,10 @@
-# @dori/utils
+# corekit
 
 A comprehensive collection of TypeScript utility functions for modern web development.
 
 ## Features
 
-- 🛠️ **Comprehensive**: String, object, cookie, number, and validation utilities
+- 🛠️ **Comprehensive**: String, object, cookie, number, validation, and common utilities
 - 📦 **Tree-shakable**: Import only what you need
 - 🔒 **Type-safe**: Full TypeScript support with type definitions
 - ⚡ **Lightweight**: Minimal dependencies and optimized for performance
@@ -13,11 +13,11 @@ A comprehensive collection of TypeScript utility functions for modern web develo
 ## Installation
 
 ```bash
-npm install @dori/utils
+npm install corekit
 # or
-pnpm add @dori/utils
+pnpm add corekit
 # or
-yarn add @dori/utils
+yarn add corekit
 ```
 
 ## Usage
@@ -29,7 +29,8 @@ import {
   cookieUtil,
   numberUtil,
   validationUtil,
-} from "@dori/utils";
+  commonUtil,
+} from "corekit";
 
 // String utilities
 const escaped = stringUtil.escapeHtml("<div>Hello</div>");
@@ -46,6 +47,10 @@ const difference = numberUtil.subtract(10, 3); // 7
 // Validation utilities
 const isValid = validationUtil.checkEmail("user@example.com"); // true
 const isHttpUrl = validationUtil.checkHttpUrl("https://example.com"); // true
+
+// Common utilities
+const empty = commonUtil.isEmpty(""); // true
+const notEmpty = commonUtil.isEmpty("hello"); // false
 
 // Cookie utilities
 cookieUtil.setCookie("theme", "dark");
@@ -73,6 +78,10 @@ const theme = cookieUtil.getCookie("theme");
 
 - `checkEmail(email: string): boolean` - Validates email format
 - `checkHttpUrl(url: string): boolean` - Validates HTTP/HTTPS URL format
+
+### CommonUtil
+
+- `isEmpty(value: unknown): boolean` - Checks if a value is empty (null, undefined, "", 0, [], {}, empty Set/Map, NaN, or invalid Date)
 
 ### CookieUtil
 
