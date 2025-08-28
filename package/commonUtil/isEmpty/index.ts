@@ -1,4 +1,4 @@
-export default function isEmpty(value: any): boolean {
+export default function isEmpty(value: unknown): boolean {
   if (value == null) return true;
 
   if (typeof value === "number" && isNaN(value)) return true;
