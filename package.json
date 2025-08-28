@@ -1,7 +1,7 @@
 {
-  "name": "corekit",
+  "name": "core-kit",
   "version": "0.0.1",
-  "description": "A lightweight and modern utility toolkit for JavaScript and TypeScript. CoreKit provides essential functions for strings, arrays, objects, and more, designed for simplicity and productivity.",
+  "description": "A lightweight and modern utility toolkit for JavaScript and TypeScript. core-kit provides essential functions for strings, arrays, objects, and more, designed for simplicity and productivity.",
   "keywords": [
     "javascript",
     "typescript",
@@ -15,18 +15,19 @@
     "array-utils",
     "object-utils",
     "functional",
+    "core-kit",
     "corekit",
     "esm",
     "cjs"
   ],
   "license": "MIT",
   "type": "module",
-  "main": "dist/bundle/corekit.js",
+  "main": "dist/bundle/core-kit.js",
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
-      "require": "./dist/bundle/corekit.cjs",
-      "import": "./dist/bundle/corekit.js"
+      "require": "./dist/bundle/core-kit.cjs",
+      "import": "./dist/bundle/core-kit.js"
     }
   },
   "scripts": {
@@ -37,12 +38,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/klmhyeonwoo/corekit"
+    "url": "https://github.com/klmhyeonwoo/core-kit"
   },
   "bugs": {
-    "url": "https://github.com/klmhyeonwoo/corekit/issues"
+    "url": "https://github.com/klmhyeonwoo/core-kit/issues"
   },
-  "homepage": "https://github.com/klmhyeonwoo/corekit#readme",
+  "homepage": "https://github.com/klmhyeonwoo/core-kit#readme",
   "devDependencies": {
     "@types/node": "^24.3.0",
     "@vitest/coverage-v8": "^3.2.4",
