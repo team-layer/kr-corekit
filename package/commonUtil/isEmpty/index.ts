@@ -3,7 +3,6 @@ export default function isEmpty(value: any): boolean {
 
   if (typeof value === "number" && isNaN(value)) return true;
 
-  if (value === 0) return true;
 
   if (typeof value === "string" || Array.isArray(value)) {
     return value.length === 0;
