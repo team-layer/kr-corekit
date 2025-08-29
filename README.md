@@ -47,6 +47,7 @@ const difference = numberUtil.subtract(10, 3); // 7
 // Validation utilities
 const isValid = validationUtil.checkEmail("user@example.com"); // true
 const isHttpUrl = validationUtil.checkHttpUrl("https://example.com"); // true
+const isDomain = validationUtil.checkDomain("example.com"); // true
 
 // Common utilities
 const empty = commonUtil.isEmpty(""); // true
@@ -80,6 +81,7 @@ const theme = cookieUtil.getCookie("theme");
 
 - `checkEmail(email: string): boolean` - Validates email format
 - `checkHttpUrl(url: string): boolean` - Validates HTTP/HTTPS URL format
+- `checkDomain(domain: string): boolean` - Validates domain name format
 
 ### CommonUtil
 
