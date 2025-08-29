@@ -51,6 +51,8 @@ const isHttpUrl = validationUtil.checkHttpUrl("https://example.com"); // true
 // Common utilities
 const empty = commonUtil.isEmpty(""); // true
 const notEmpty = commonUtil.isEmpty("hello"); // false
+const nullCheck = commonUtil.isNull(null); // true
+const notNull = commonUtil.isNull("hello"); // false
 
 // Cookie utilities
 cookieUtil.setCookie("theme", "dark");
@@ -82,6 +84,7 @@ const theme = cookieUtil.getCookie("theme");
 ### CommonUtil
 
 - `isEmpty(value: unknown): boolean` - Checks if a value is empty (null, undefined, "", 0, [], {}, empty Set/Map, NaN, or invalid Date)
+- `isNull(value: unknown): value is null` - Type guard that checks if a value is null and narrows the type
 
 ### CookieUtil
 
