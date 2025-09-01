@@ -1,8 +1,8 @@
 export default function checkPassword(
   password: string,
   options?: {
-    minLength?: number | null;
-    maxLength?: number | null;
+    minLength?: number;
+    maxLength?: number;
     requireUppercase?: boolean;
     requireLowercase?: boolean;
     requireNumber?: boolean;
@@ -10,16 +10,16 @@ export default function checkPassword(
   }
 ): boolean {
   const {
-    minLength = null,
-    maxLength = null,
+    minLength,
+    maxLength,
     requireUppercase = false,
     requireLowercase = false,
     requireNumber = false,
     requireSpecialChar = false,
   } = options || {};
 
-  if (minLength !== null && password.length < minLength) return false;
-  if (maxLength !== null && password.length > maxLength) return false;
+  if (minLength !== undefined && password.length < minLength) return false;
+  if (maxLength !== undefined && password.length > maxLength) return false;
   const hasUpperCase = requireUppercase ? /[A-Z]/.test(password) : true;
   const hasLowerCase = requireLowercase ? /[a-z]/.test(password) : true;
   const hasNumber = requireNumber ? /\d/.test(password) : true;
