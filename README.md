@@ -43,6 +43,7 @@ const frozen = objectUtil.deepFreeze({ a: { b: 1 } });
 // Number utilities
 const total = numberUtil.sum(1, 2, 3, 4, 5); // 15
 const difference = numberUtil.subtract(10, 3); // 7
+const product = numberUtil.multiply(2, 3, 4); // 24
 
 // Validation utilities
 const isValid = validationUtil.checkEmail("user@example.com"); // true
@@ -77,6 +78,7 @@ const theme = cookieUtil.getCookie("theme");
 
 - `sum(...numbers: number[]): number` - Calculates sum of numbers
 - `subtract(...numbers: number[]): number` - Calculates subtraction of numbers
+- `multiply(...numbers: number[]): number` - Calculates multiplication of numbers
 
 ### ValidationUtil
 
