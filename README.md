@@ -49,6 +49,7 @@ const product = numberUtil.multiply(2, 3, 4); // 24
 const isValid = validationUtil.checkEmail("user@example.com"); // true
 const isHttpUrl = validationUtil.checkHttpUrl("https://example.com"); // true
 const isDomain = validationUtil.checkDomain("example.com"); // true
+const isBase64 = validationUtil.checkBase64("U29tZSB2YWxpZCBiYXNlNjQgc3RyaW5n"); // true
 
 // Common utilities
 const empty = commonUtil.isEmpty(""); // true
@@ -85,6 +86,7 @@ const theme = cookieUtil.getCookie("theme");
 - `checkEmail(email: string): boolean` - Validates email format
 - `checkHttpUrl(url: string): boolean` - Validates HTTP/HTTPS URL format
 - `checkDomain(domain: string): boolean` - Validates domain name format
+- `checkBase64(value: string): boolean` - Validates whether a string is a valid base64 encoded value
 
 ### CommonUtil
 
