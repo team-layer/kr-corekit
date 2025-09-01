@@ -1,0 +1,12 @@
+package/
+coverage/
+.github/
+node_modules/
+vite.config.ts
+tsconfig.json
+*.test.ts
+*.spec.ts
+.vitest/
+.vscode/
+*.log
+*.tgz
