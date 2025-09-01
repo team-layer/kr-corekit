@@ -11,4 +11,9 @@ describe("checkBase64 유틸 함수 테스트", () => {
     expect(checkBase64("bfdbfdbsba")).toBe(false);
     expect(checkBase64("U29tZSB2YWxpZCBiYXNlNjQgc3RyaW5n===")).toBe(false);
   });
+
+  it("만약 빈 문자열로 함수를 호출할 경우 false를 반환해야 합니다.", () => {
+    expect(checkBase64("")).toBe(false);
+    expect(checkBase64(" ")).toBe(false);
+  });
 });
