@@ -50,6 +50,13 @@ const isValid = validationUtil.checkEmail("user@example.com"); // true
 const isHttpUrl = validationUtil.checkHttpUrl("https://example.com"); // true
 const isDomain = validationUtil.checkDomain("example.com"); // true
 const isBase64 = validationUtil.checkBase64("U29tZSB2YWxpZCBiYXNlNjQgc3RyaW5n"); // true
+const isPasswordValid = validationUtil.checkPassword("Abc123!@#", {
+  minLength: 8,
+  requireUppercase: true,
+  requireLowercase: true,
+  requireNumber: true,
+  requireSpecialChar: true,
+}); // true
 
 // Common utilities
 const empty = commonUtil.isEmpty(""); // true
@@ -87,6 +94,7 @@ const theme = cookieUtil.getCookie("theme");
 - `checkHttpUrl(url: string): boolean` - Validates HTTP/HTTPS URL format
 - `checkDomain(domain: string): boolean` - Validates domain name format
 - `checkBase64(value: string): boolean` - Validates whether a string is a valid base64 encoded value
+- `checkPassword(password: string, options?: { minLength?: number; maxLength?: number; requireUppercase?: boolean; requireLowercase?: boolean; requireNumber?: boolean; requireSpecialChar?: boolean }): boolean` - Validates password strength and requirements
 
 ### CommonUtil
 
