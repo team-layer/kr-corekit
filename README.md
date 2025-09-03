@@ -39,6 +39,7 @@ const unescaped = stringUtil.unescapeHtml("&lt;div&gt;Hello&lt;/div&gt;");
 // Object utilities
 const cleaned = objectUtil.clearNullProperties({ a: 1, b: null, c: 3 });
 const frozen = objectUtil.deepFreeze({ a: { b: 1 } });
+const withoutKey = objectUtil.removeKey("b", { a: 1, b: 2, c: 3 }); // { a: 1, c: 3 }
 
 // Number utilities
 const total = numberUtil.sum(1, 2, 3, 4, 5); // 15
@@ -81,6 +82,7 @@ const theme = cookieUtil.getCookie("theme");
 
 - `clearNullProperties(obj: object): object` - Removes null/undefined properties
 - `deepFreeze(obj: object): object` - Deep freezes an object recursively
+- `removeKey(key: string, obj: Record<string, any>): object` - Returns a new object with the specified key removed
 
 ### NumberUtil
 
