@@ -4,7 +4,7 @@ A comprehensive collection of TypeScript utility functions for modern web develo
 
 ## Features
 
-- 🛠️ **Comprehensive**: String, object, cookie, number, validation, and common utilities
+- 🛠️ **Comprehensive**: String, object, cookie, number, validation, common, and search query utilities
 - 📦 **Tree-shakable**: Import only what you need
 - 🔒 **Type-safe**: Full TypeScript support with type definitions
 - ⚡ **Lightweight**: Minimal dependencies and optimized for performance
@@ -30,6 +30,7 @@ import {
   numberUtil,
   validationUtil,
   commonUtil,
+  searchQueryUtil,
 } from "kr-corekit";
 
 // String utilities
@@ -65,6 +66,16 @@ const notEmpty = commonUtil.isEmpty("hello"); // false
 const nullCheck = commonUtil.isNull(null); // true
 const notNull = commonUtil.isNull("hello"); // false
 await commonUtil.sleep(1000); // Pauses execution for 1 second
+
+// Search query utilities
+const parsed = searchQueryUtil.parseQueryString("name=John&tags=react&tags=typescript");
+// { name: "John", tags: ["react", "typescript"] }
+const queryString = searchQueryUtil.buildQueryString({ name: "Jane", age: 25, tags: ["vue", "nodejs"] });
+// "name=Jane&age=25&tags=vue&tags=nodejs"
+const cleaned = searchQueryUtil.removeEmptyParams({ name: "John", city: "", tags: ["frontend", null] });
+// { name: "John", tags: ["frontend"] }
+const normalized = searchQueryUtil.normalizeQuery({ NAME: "  JOHN  " }, { toLowerCase: true, trimValues: true });
+// { name: "john" }
 
 // Cookie utilities
 cookieUtil.setCookie("theme", "dark");
@@ -103,6 +114,13 @@ const theme = cookieUtil.getCookie("theme");
 - `isEmpty(value: unknown): boolean` - Checks if a value is empty (null, undefined, "", 0, [], {}, empty Set/Map, NaN, or invalid Date)
 - `isNull(value: unknown): value is null` - Type guard that checks if a value is null and narrows the type
 - `sleep(ms: number): Promise<void>` - Pauses execution for a specified number of milliseconds
+
+### SearchQueryUtil
+
+- `parseQueryString(queryString: string): Record<string, string | string[]>` - Parses URL query string into an object with support for multiple values
+- `buildQueryString(params: Record<string, any>): string` - Builds a query string from an object with proper URL encoding
+- `removeEmptyParams(params: Record<string, any>): Record<string, any>` - Recursively removes empty values (null, undefined, "", empty arrays) from parameters
+- `normalizeQuery(params: Record<string, any>, options?: { toLowerCase?: boolean; trimValues?: boolean; removeEmpty?: boolean; sortKeys?: boolean }): Record<string, any>` - Normalizes query parameters with configurable options
 
 ### CookieUtil
 
