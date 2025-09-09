@@ -1,205 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites name="vitest tests" tests="85" failures="0" errors="0" time="0.030314623">
-    <testsuite name="package/commonUtil/isEmpty/index.test.ts" timestamp="2025-09-06T13:23:12.333Z" hostname="users-MacBook-Pro.local" tests="16" failures="0" errors="0" skipped="0" time="0.002486">
-        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 비어있지 않은 값에 대해 false를 반환해야 함 &gt; 비어있지 않은 문자열에 대해 false를 반환한다" time="0.000741583">
+<testsuites name="vitest tests" tests="14" failures="0" errors="0" time="0.002762667">
+    <testsuite name="package/formatUtil/formatPhoneNumber/index.test.ts" timestamp="2025-09-09T06:07:30.770Z" hostname="users-MacBook-Pro.local" tests="14" failures="0" errors="0" skipped="0" time="0.002762667">
+        <testcase classname="package/formatUtil/formatPhoneNumber/index.test.ts" name="formatPhoneNumber &gt; 휴대폰 번호 &gt; 11자리 휴대폰 번호에 하이픈을 올바르게 추가한다 (010)" time="0.000906209">
         </testcase>
-        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 비어있지 않은 값에 대해 false를 반환해야 함 &gt; 0이 아닌 숫자에 대해 false를 반환한다" time="0.00014525">
+        <testcase classname="package/formatUtil/formatPhoneNumber/index.test.ts" name="formatPhoneNumber &gt; 휴대폰 번호 &gt; 11자리 휴대폰 번호에 하이픈을 올바르게 추가한다 (011)" time="0.00012675">
         </testcase>
-        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 비어있지 않은 값에 대해 false를 반환해야 함 &gt; 비어있지 않은 배열에 대해 false를 반환한다" time="0.000116625">
+        <testcase classname="package/formatUtil/formatPhoneNumber/index.test.ts" name="formatPhoneNumber &gt; 휴대폰 번호 &gt; 중간에 공백이나 하이픈이 있어도 숫자를 제외하고 올바르게 처리한다" time="0.000072291">
         </testcase>
-        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 비어있지 않은 값에 대해 false를 반환해야 함 &gt; 0에 대해 false를 반환한다" time="0.000052292">
+        <testcase classname="package/formatUtil/formatPhoneNumber/index.test.ts" name="formatPhoneNumber &gt; 지역번호 &gt; 서울 지역번호(02) 9자리에 하이픈을 올바르게 추가한다" time="0.000138458">
         </testcase>
-        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 비어있지 않은 값에 대해 false를 반환해야 함 &gt; 비어있지 않은 객체에 대해 false를 반환한다" time="0.000102959">
+        <testcase classname="package/formatUtil/formatPhoneNumber/index.test.ts" name="formatPhoneNumber &gt; 지역번호 &gt; 서울 지역번호(02) 10자리에 하이픈을 올바르게 추가한다" time="0.000113125">
         </testcase>
-        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 비어있지 않은 값에 대해 false를 반환해야 함 &gt; 불린 값에 대해 false를 반환한다" time="0.000065167">
+        <testcase classname="package/formatUtil/formatPhoneNumber/index.test.ts" name="formatPhoneNumber &gt; 지역번호 &gt; 서울 외 지역번호(031) 10자리에 하이픈을 올바르게 추가한다" time="0.000140791">
         </testcase>
-        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 빈 값에 대해 true를 반환해야 함 &gt; 빈 문자열에 대해 true를 반환한다" time="0.000045625">
+        <testcase classname="package/formatUtil/formatPhoneNumber/index.test.ts" name="formatPhoneNumber &gt; 지역번호 &gt; 서울 외 지역번호(054) 10자리에 하이픈을 올바르게 추가한다" time="0.000074291">
         </testcase>
-        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 빈 값에 대해 true를 반환해야 함 &gt; 빈 배열에 대해 true를 반환한다" time="0.000039667">
+        <testcase classname="package/formatUtil/formatPhoneNumber/index.test.ts" name="formatPhoneNumber &gt; 대표번호 &gt; 8자리 대표번호(1588)에 하이픈을 올바르게 추가한다" time="0.000053708">
         </testcase>
-        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 빈 값에 대해 true를 반환해야 함 &gt; 빈 객체에 대해 true를 반환한다" time="0.00006">
+        <testcase classname="package/formatUtil/formatPhoneNumber/index.test.ts" name="formatPhoneNumber &gt; 대표번호 &gt; 8자리 대표번호(1670)에 하이픈을 올바르게 추가한다" time="0.000071584">
         </testcase>
-        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 빈 값에 대해 true를 반환해야 함 &gt; null과 undefined에 대해 true를 반환한다" time="0.000084792">
+        <testcase classname="package/formatUtil/formatPhoneNumber/index.test.ts" name="formatPhoneNumber &gt; 예외 케이스 &gt; 빈 문자열을 입력하면 빈 문자열을 반환한다" time="0.000062375">
         </testcase>
-        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 엣지 케이스 &gt; NaN을 처리한다" time="0.000062334">
+        <testcase classname="package/formatUtil/formatPhoneNumber/index.test.ts" name="formatPhoneNumber &gt; 예외 케이스 &gt; null 또는 undefined를 입력하면 빈 문자열을 반환한다" time="0.000056708">
         </testcase>
-        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 엣지 케이스 &gt; Date 객체를 처리한다" time="0.00006325">
+        <testcase classname="package/formatUtil/formatPhoneNumber/index.test.ts" name="formatPhoneNumber &gt; 예외 케이스 &gt; 숫자가 아닌 문자가 포함된 경우, 해당 문자를 제거하고 포맷팅한다" time="0.000037042">
         </testcase>
-        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 엣지 케이스 &gt; Set과 Map을 처리한다" time="0.000086166">
+        <testcase classname="package/formatUtil/formatPhoneNumber/index.test.ts" name="formatPhoneNumber &gt; 예외 케이스 &gt; 어떤 형식에도 맞지 않는 짧은 길이라면 숫자만 반환한다" time="0.000035">
         </testcase>
-        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 엣지 케이스 &gt; 함수를 처리한다" time="0.000045333">
-        </testcase>
-        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 엣지 케이스 &gt; 심볼을 처리한다" time="0.000033209">
-        </testcase>
-        <testcase classname="package/commonUtil/isEmpty/index.test.ts" name="isEmpty 유틸 함수 테스트 &gt; 엣지 케이스 &gt; 빈 심볼의 경우 true를 반환한다" time="0.00003075">
-        </testcase>
-    </testsuite>
-    <testsuite name="package/commonUtil/isNull/index.test.ts" timestamp="2025-09-06T13:23:12.334Z" hostname="users-MacBook-Pro.local" tests="5" failures="0" errors="0" skipped="0" time="0.001747916">
-        <testcase classname="package/commonUtil/isNull/index.test.ts" name="isNull 유틸 함수 테스트 &gt; null이 들어오는 경우 true를 반환한다." time="0.000664416">
-        </testcase>
-        <testcase classname="package/commonUtil/isNull/index.test.ts" name="isNull 유틸 함수 테스트 &gt; undefined이 들어오는 경우 false를 반환한다." time="0.000077542">
-        </testcase>
-        <testcase classname="package/commonUtil/isNull/index.test.ts" name="isNull 유틸 함수 테스트 &gt; 빈 문자열이 들어오는 경우 false를 반환한다." time="0.000064167">
-        </testcase>
-        <testcase classname="package/commonUtil/isNull/index.test.ts" name="isNull 유틸 함수 테스트 &gt; 공백 문자열이 들어오는 경우 false를 반환한다." time="0.000058958">
-        </testcase>
-        <testcase classname="package/commonUtil/isNull/index.test.ts" name="isNull 유틸 함수 테스트 &gt; 0이 들어오는 경우 false를 반환한다." time="0.00011525">
-        </testcase>
-    </testsuite>
-    <testsuite name="package/commonUtil/sleep/index.test.ts" timestamp="2025-09-06T13:23:12.335Z" hostname="users-MacBook-Pro.local" tests="4" failures="0" errors="0" skipped="0" time="0.00439025">
-        <testcase classname="package/commonUtil/sleep/index.test.ts" name="sleep &gt; 지정된 시간(ms) 이후에 resolve 되어야 한다" time="0.002168042">
-        </testcase>
-        <testcase classname="package/commonUtil/sleep/index.test.ts" name="sleep &gt; 지정된 시간 이전에는 resolve 되면 안 된다" time="0.000912042">
-        </testcase>
-        <testcase classname="package/commonUtil/sleep/index.test.ts" name="sleep &gt; ms가 0일 때 다음 틱(tick)에 resolve 되어야 한다" time="0.000417542">
-        </testcase>
-        <testcase classname="package/commonUtil/sleep/index.test.ts" name="sleep &gt; 음수 값은 0처럼 처리되어야 한다" time="0.0002805">
-        </testcase>
-    </testsuite>
-    <testsuite name="package/numberUtil/multiply/index.test.ts" timestamp="2025-09-06T13:23:12.335Z" hostname="users-MacBook-Pro.local" tests="9" failures="0" errors="0" skipped="0" time="0.002049917">
-        <testcase classname="package/numberUtil/multiply/index.test.ts" name="multiply &gt; 기본 케이스 &gt; 두 양수를 올바르게 곱한다" time="0.000701209">
-        </testcase>
-        <testcase classname="package/numberUtil/multiply/index.test.ts" name="multiply &gt; 기본 케이스 &gt; 여러 숫자를 올바르게 곱한다" time="0.000135625">
-        </testcase>
-        <testcase classname="package/numberUtil/multiply/index.test.ts" name="multiply &gt; 기본 케이스 &gt; 인수 중 0이 포함되면 0을 반환한다" time="0.00005725">
-        </testcase>
-        <testcase classname="package/numberUtil/multiply/index.test.ts" name="multiply &gt; 기본 케이스 &gt; 음수를 올바르게 처리한다" time="0.000080667">
-        </testcase>
-        <testcase classname="package/numberUtil/multiply/index.test.ts" name="multiply &gt; 기본 케이스 &gt; 부동소수점을 올바르게 처리한다" time="0.000050041">
-        </testcase>
-        <testcase classname="package/numberUtil/multiply/index.test.ts" name="multiply &gt; 엣지 케이스 &gt; 인수가 없을 때 1을 반환한다" time="0.0000595">
-        </testcase>
-        <testcase classname="package/numberUtil/multiply/index.test.ts" name="multiply &gt; 엣지 케이스 &gt; 인수가 하나일 때 해당 숫자 자신을 반환한다" time="0.000071792">
-        </testcase>
-        <testcase classname="package/numberUtil/multiply/index.test.ts" name="multiply &gt; 엣지 케이스 &gt; 인수 중 NaN이 포함되면 NaN을 반환한다" time="0.000091375">
-        </testcase>
-        <testcase classname="package/numberUtil/multiply/index.test.ts" name="multiply &gt; 엣지 케이스 &gt; Infinity(무한대)를 올바르게 처리한다" time="0.00007725">
-        </testcase>
-    </testsuite>
-    <testsuite name="package/numberUtil/subtract/index.test.ts" timestamp="2025-09-06T13:23:12.336Z" hostname="users-MacBook-Pro.local" tests="8" failures="0" errors="0" skipped="0" time="0.001920375">
-        <testcase classname="package/numberUtil/subtract/index.test.ts" name="subtract &gt; 기본 케이스 &gt; 두 양수를 올바르게 뺀다" time="0.000695583">
-        </testcase>
-        <testcase classname="package/numberUtil/subtract/index.test.ts" name="subtract &gt; 기본 케이스 &gt; 여러 숫자를 순서대로 뺀다" time="0.000082084">
-        </testcase>
-        <testcase classname="package/numberUtil/subtract/index.test.ts" name="subtract &gt; 기본 케이스 &gt; 음수를 포함한 뺄셈을 올바르게 처리한다" time="0.000078042">
-        </testcase>
-        <testcase classname="package/numberUtil/subtract/index.test.ts" name="subtract &gt; 예외 케이스 &gt; 인수가 없을 때 0을 반환한다" time="0.000063625">
-        </testcase>
-        <testcase classname="package/numberUtil/subtract/index.test.ts" name="subtract &gt; 예외 케이스 &gt; 인수가 하나일 때 해당 숫자 자신을 반환한다" time="0.00006825">
-        </testcase>
-        <testcase classname="package/numberUtil/subtract/index.test.ts" name="subtract &gt; 예외 케이스 &gt; 0을 포함한 뺄셈을 올바르게 처리한다" time="0.00007075">
-        </testcase>
-        <testcase classname="package/numberUtil/subtract/index.test.ts" name="subtract &gt; 예외 케이스 &gt; 부동소수점을 올바르게 처리한다" time="0.000083167">
-        </testcase>
-        <testcase classname="package/numberUtil/subtract/index.test.ts" name="subtract &gt; 예외 케이스 &gt; 인수 중 NaN이 포함되면 NaN을 반환한다" time="0.000059334">
-        </testcase>
-    </testsuite>
-    <testsuite name="package/numberUtil/sum/index.test.ts" timestamp="2025-09-06T13:23:12.337Z" hostname="users-MacBook-Pro.local" tests="7" failures="0" errors="0" skipped="0" time="0.001821041">
-        <testcase classname="package/numberUtil/sum/index.test.ts" name="sum &gt; 기본 케이스 &gt; 1 + 2 + 3은 6이다." time="0.000683042">
-        </testcase>
-        <testcase classname="package/numberUtil/sum/index.test.ts" name="sum &gt; 기본 케이스 &gt; 5 + 10 + 15는 30이다." time="0.000081792">
-        </testcase>
-        <testcase classname="package/numberUtil/sum/index.test.ts" name="sum &gt; 예외 케이스 &gt; 인수가 없을 때 0을 반환한다" time="0.000069792">
-        </testcase>
-        <testcase classname="package/numberUtil/sum/index.test.ts" name="sum &gt; 예외 케이스 &gt; 인수가 하나일 때 해당 숫자 자신을 반환한다" time="0.0000835">
-        </testcase>
-        <testcase classname="package/numberUtil/sum/index.test.ts" name="sum &gt; 예외 케이스 &gt; 음수를 포함한 덧셈을 올바르게 처리한다" time="0.000066584">
-        </testcase>
-        <testcase classname="package/numberUtil/sum/index.test.ts" name="sum &gt; 예외 케이스 &gt; 부동소수점을 올바르게 처리한다" time="0.000088875">
-        </testcase>
-        <testcase classname="package/numberUtil/sum/index.test.ts" name="sum &gt; 예외 케이스 &gt; 인수 중 NaN이 포함되면 NaN을 반환한다" time="0.000060542">
-        </testcase>
-    </testsuite>
-    <testsuite name="package/objectUtil/clearNullProperties/index.test.ts" timestamp="2025-09-06T13:23:12.337Z" hostname="users-MacBook-Pro.local" tests="1" failures="0" errors="0" skipped="0" time="0.001461208">
-        <testcase classname="package/objectUtil/clearNullProperties/index.test.ts" name="만약 Null이 객체에 존재한다면, Null이 없는 객체가 반환된다." time="0.000945208">
-        </testcase>
-    </testsuite>
-    <testsuite name="package/objectUtil/removeKey/index.test.ts" timestamp="2025-09-06T13:23:12.337Z" hostname="users-MacBook-Pro.local" tests="3" failures="0" errors="0" skipped="0" time="0.001809667">
-        <testcase classname="package/objectUtil/removeKey/index.test.ts" name="removeKey 유틸 함수 테스트 &gt; 객체와 키를 입력했을 때, 정상적으로 객체에서 속성이 제거되어야한다." time="0.000984125">
-        </testcase>
-        <testcase classname="package/objectUtil/removeKey/index.test.ts" name="removeKey 유틸 함수 테스트 &gt; 객체와 키를 입력했을 때, 제거할 키가 객체에 없으면 원본 객체가 반환되어야한다." time="0.000120375">
-        </testcase>
-        <testcase classname="package/objectUtil/removeKey/index.test.ts" name="removeKey 유틸 함수 테스트 &gt; 빈 객체와 키를 입력했을 때, 빈 객체가 반환되어야한다." time="0.000079667">
-        </testcase>
-    </testsuite>
-    <testsuite name="package/objectUtil/deepFreeze/index.test.ts" timestamp="2025-09-06T13:23:12.337Z" hostname="users-MacBook-Pro.local" tests="1" failures="0" errors="0" skipped="0" time="0.00127525">
-        <testcase classname="package/objectUtil/deepFreeze/index.test.ts" name="객체의 불변성이 유지된다." time="0.000749042">
-        </testcase>
-    </testsuite>
-    <testsuite name="package/stringUtil/unescapeHtml/index.test.ts" timestamp="2025-09-06T13:23:12.337Z" hostname="users-MacBook-Pro.local" tests="1" failures="0" errors="0" skipped="0" time="0.001148208">
-        <testcase classname="package/stringUtil/unescapeHtml/index.test.ts" name="HTML 특수 문자를 언이스케이프한다." time="0.000675292">
-        </testcase>
-    </testsuite>
-    <testsuite name="package/stringUtil/escapeHtml/index.test.ts" timestamp="2025-09-06T13:23:12.338Z" hostname="users-MacBook-Pro.local" tests="1" failures="0" errors="0" skipped="0" time="0.001262458">
-        <testcase classname="package/stringUtil/escapeHtml/index.test.ts" name="HTML 특수 문자를 이스케이프한다." time="0.000790042">
-        </testcase>
-    </testsuite>
-    <testsuite name="package/validationUtil/checkBase64/index.test.ts" timestamp="2025-09-06T13:23:12.338Z" hostname="users-MacBook-Pro.local" tests="3" failures="0" errors="0" skipped="0" time="0.001817958">
-        <testcase classname="package/validationUtil/checkBase64/index.test.ts" name="checkBase64 유틸 함수 테스트 &gt; 유효한 base64 문자열에 대해 true를 반환해야 합니다." time="0.000973625">
-        </testcase>
-        <testcase classname="package/validationUtil/checkBase64/index.test.ts" name="checkBase64 유틸 함수 테스트 &gt; 유효하지 않은 base64 문자열에 대해 false를 반환해야 합니다." time="0.000098792">
-        </testcase>
-        <testcase classname="package/validationUtil/checkBase64/index.test.ts" name="checkBase64 유틸 함수 테스트 &gt; 만약 빈 문자열로 함수를 호출할 경우 false를 반환해야 합니다." time="0.000082958">
-        </testcase>
-    </testsuite>
-    <testsuite name="package/validationUtil/checkDomain/index.test.ts" timestamp="2025-09-06T13:23:12.338Z" hostname="users-MacBook-Pro.local" tests="2" failures="0" errors="0" skipped="0" time="0.001932">
-        <testcase classname="package/validationUtil/checkDomain/index.test.ts" name="checkDomain 유틸 함수 테스트 &gt; 유효한 도메인이 들어오는 경우 true를 반환한다." time="0.000887667">
-        </testcase>
-        <testcase classname="package/validationUtil/checkDomain/index.test.ts" name="checkDomain 유틸 함수 테스트 &gt; 유효하지 않은 도메인이 들어오는 경우 false를 반환한다." time="0.000116792">
-        </testcase>
-    </testsuite>
-    <testsuite name="package/validationUtil/checkEmail/index.test.ts" timestamp="2025-09-06T13:23:12.338Z" hostname="users-MacBook-Pro.local" tests="2" failures="0" errors="0" skipped="0" time="0.001327583">
-        <testcase classname="package/validationUtil/checkEmail/index.test.ts" name="올바른 이메일인 경우 true 값을 리턴합니다." time="0.000703916">
-        </testcase>
-        <testcase classname="package/validationUtil/checkEmail/index.test.ts" name="올바르지 않은 이메일인 경우 false 값을 리턴합니다." time="0.000112">
-        </testcase>
-    </testsuite>
-    <testsuite name="package/validationUtil/checkHttpUrl/index.test.ts" timestamp="2025-09-06T13:23:12.338Z" hostname="users-MacBook-Pro.local" tests="16" failures="0" errors="0" skipped="0" time="0.002119125">
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;http://example.com&apos;에 대해 true를 반환한다" time="0.0006975">
-        </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;https://example.com&apos;에 대해 true를 반환한다" time="0.000072875">
-        </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;https://www.example.com&apos;에 대해 true를 반환한다" time="0.000049208">
-        </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;http://example.com/path/to/resource&apos;에 대해 true를 반환한다" time="0.00005225">
-        </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;https://example.com?query=123&amp;key=value&apos;에 대해 true를 반환한다" time="0.000046791">
-        </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;http://localhost:3000&apos;에 대해 true를 반환한다" time="0.00005475">
-        </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효한 HTTP/HTTPS URL 문자열이 주어졌을 때 &gt; &apos;https://sub.domain.co.uk/page#section&apos;에 대해 true를 반환한다" time="0.000037917">
-        </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;www.example.com&apos;에 대해 false를 반환한다" time="0.000068458">
-        </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;example.com&apos;에 대해 false를 반환한다" time="0.0000565">
-        </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;/relative/path&apos;에 대해 false를 반환한다" time="0.000066875">
-        </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;ftp://example.com&apos;에 대해 false를 반환한다" time="0.000038792">
-        </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;mailto:test@example.com&apos;에 대해 false를 반환한다" time="0.000029333">
-        </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;http:// example.com&apos;에 대해 false를 반환한다" time="0.00003475">
-        </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;https://&apos;에 대해 false를 반환한다" time="0.0000355">
-        </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;just a random string&apos;에 대해 false를 반환한다" time="0.000031625">
-        </testcase>
-        <testcase classname="package/validationUtil/checkHttpUrl/index.test.ts" name="URL 유효성 검사 &gt; 유효하지 않은 URL 문자열이 주어졌을 때 &gt; &apos;&apos;에 대해 false를 반환한다" time="0.000033292">
-        </testcase>
-    </testsuite>
-    <testsuite name="package/validationUtil/checkPassword/index.test.ts" timestamp="2025-09-06T13:23:12.340Z" hostname="users-MacBook-Pro.local" tests="6" failures="0" errors="0" skipped="0" time="0.001745667">
-        <testcase classname="package/validationUtil/checkPassword/index.test.ts" name="checkPassword 유틸 함수 테스트 &gt; 유효한 비밀번호에 대해 true를 반환해야 합니다. &gt; 기본 상태는 아무 옵션도 설정되어있지 않기 때문에 true를 반환해야 합니다." time="0.000688208">
-        </testcase>
-        <testcase classname="package/validationUtil/checkPassword/index.test.ts" name="checkPassword 유틸 함수 테스트 &gt; 유효한 비밀번호에 대해 true를 반환해야 합니다. &gt; 특수 문자가 필요한 경우 true를 반환해야 합니다." time="0.00009825">
-        </testcase>
-        <testcase classname="package/validationUtil/checkPassword/index.test.ts" name="checkPassword 유틸 함수 테스트 &gt; 유효한 비밀번호에 대해 true를 반환해야 합니다. &gt; 대문자가 필요한 경우 true를 반환해야 합니다." time="0.000070167">
-        </testcase>
-        <testcase classname="package/validationUtil/checkPassword/index.test.ts" name="checkPassword 유틸 함수 테스트 &gt; 유효한 비밀번호에 대해 true를 반환해야 합니다. &gt; 최소 3자, 최대 5자의 길이를 가져야 하는 경우 true를 반환해야 합니다." time="0.000061375">
-        </testcase>
-        <testcase classname="package/validationUtil/checkPassword/index.test.ts" name="checkPassword 유틸 함수 테스트 &gt; 유효하지 않은 비밀번호에 대해 false를 반환해야 합니다. &gt; 길이가 유효하지 않은 경우 false를 반환해야 합니다." time="0.000061709">
-        </testcase>
-        <testcase classname="package/validationUtil/checkPassword/index.test.ts" name="checkPassword 유틸 함수 테스트 &gt; 유효하지 않은 비밀번호에 대해 false를 반환해야 합니다. &gt; 특수 문자가 없는 경우 false를 반환해야 합니다." time="0.000082333">
+        <testcase classname="package/formatUtil/formatPhoneNumber/index.test.ts" name="formatPhoneNumber &gt; 예외 케이스 &gt; 어떤 형식에도 맞지 않는 긴 길이라면 숫자만 반환한다" time="0.00004375">
         </testcase>
     </testsuite>
 </testsuites>
