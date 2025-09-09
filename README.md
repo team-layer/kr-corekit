@@ -4,7 +4,7 @@ A comprehensive collection of TypeScript utility functions for modern web develo
 
 ## Features
 
-- 🛠️ **Comprehensive**: String, object, cookie, number, validation, and common utilities
+- 🛠️ **Comprehensive**: String, object, cookie, number, validation, format, and common utilities
 - 📦 **Tree-shakable**: Import only what you need
 - 🔒 **Type-safe**: Full TypeScript support with type definitions
 - ⚡ **Lightweight**: Minimal dependencies and optimized for performance
@@ -30,6 +30,7 @@ import {
   numberUtil,
   validationUtil,
   commonUtil,
+  formatUtil,
 } from "kr-corekit";
 
 // String utilities
@@ -69,6 +70,8 @@ await commonUtil.sleep(1000); // Pauses execution for 1 second
 // Cookie utilities
 cookieUtil.setCookie("theme", "dark");
 const theme = cookieUtil.getCookie("theme");
+// Format utilities
+const formattedPhone = formatUtil.formatPhoneNumber("01012345678"); // "010-1234-5678"
 ```
 
 ## API Reference
@@ -89,6 +92,10 @@ const theme = cookieUtil.getCookie("theme");
 - `sum(...numbers: number[]): number` - Calculates sum of numbers
 - `subtract(...numbers: number[]): number` - Calculates subtraction of numbers
 - `multiply(...numbers: number[]): number` - Calculates multiplication of numbers
+
+### FormatUtil
+
+- `formatPhoneNumber(phone: string): string` - Formats a phone number string to a standard format (e.g., "010-1234-5678")
 
 ### ValidationUtil
 
