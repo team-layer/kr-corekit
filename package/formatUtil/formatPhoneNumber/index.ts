@@ -34,22 +34,18 @@ const formatRules = [
   },
 ];
 
-export const formatPhoneNumber = (phoneNumber: string): string => {
-  if (!phoneNumber) {
-    return "";
-  }
+export default function formatPhoneNumber(phoneNumber: string): string {
+  if (!phoneNumber) return "";
 
   const digitsOnly = phoneNumber.replace(/\D/g, "");
 
-  for (const rule of formatRules) {
-    if (rule.prefix && !digitsOnly.startsWith(rule.prefix)) {
-      continue;
-    }
+  const matched = formatRules.find(
+    (rule) =>
+      (!rule.prefix || digitsOnly.startsWith(rule.prefix)) &&
+      digitsOnly.length === rule.length
+  );
 
-    if (digitsOnly.length === rule.length) {
-      return digitsOnly.replace(rule.format, rule.replacement);
-    }
-  }
-
-  return digitsOnly;
-};
+  return matched
+    ? digitsOnly.replace(matched.format, matched.replacement)
+    : digitsOnly;
+}

@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { formatPhoneNumber } from "."; // 실제 함수 경로에 맞게 수정해주세요.
+import formatPhoneNumber from ".";
 
 describe("formatPhoneNumber", () => {
   describe("휴대폰 번호", () => {
