@@ -4,7 +4,7 @@ A comprehensive collection of TypeScript utility functions for modern web develo
 
 ## Features
 
-- 🛠️ **Comprehensive**: String, object, cookie, number, validation, format, and common utilities
+- 🛠️ **Comprehensive**: String, object, cookie, number, validation, format, search query, and common utilities
 - 📦 **Tree-shakable**: Import only what you need
 - 🔒 **Type-safe**: Full TypeScript support with type definitions
 - ⚡ **Lightweight**: Minimal dependencies and optimized for performance
@@ -31,6 +31,7 @@ import {
   validationUtil,
   commonUtil,
   formatUtil,
+  searchQueryUtil,
 } from "kr-corekit";
 
 // String utilities
@@ -67,6 +68,9 @@ const nullCheck = commonUtil.isNull(null); // true
 const notNull = commonUtil.isNull("hello"); // false
 await commonUtil.sleep(1000); // Pauses execution for 1 second
 const copied = await commonUtil.copyToClipboard("Hello, World!"); // true if successful
+
+// Search Query utilities
+const queryParams = searchQueryUtil.getAllQuery(); // { key: ["value1", "value2"], id: "123" }
 
 // Cookie utilities
 cookieUtil.setCookie("theme", "dark");
@@ -112,6 +116,10 @@ const formattedPhone = formatUtil.formatPhoneNumber("01012345678"); // "010-1234
 - `isNull(value: unknown): value is null` - Type guard that checks if a value is null and narrows the type
 - `sleep(ms: number): Promise<void>` - Pauses execution for a specified number of milliseconds
 - `copyToClipboard(text: string): Promise<boolean>` - Copies text to the user's clipboard. Uses modern Clipboard API with fallback to legacy execCommand method. Returns true if successful, false if failed.
+
+### SearchQueryUtil
+
+- `getAllQuery(): Record<string, string | string[]>` - Parses the current URL's query string and returns an object with key-value pairs. Values appear as arrays when the same key is used multiple times.
 
 ### CookieUtil
 
