@@ -1,5 +1,5 @@
 import { describe, test, expect, vi, beforeEach, afterEach } from "vitest";
-import { sleep } from ".";
+import sleep from ".";
 
 describe("sleep", () => {
   // 각 'test'가 실행되기 전에 가짜 타이머를 활성화합니다.
