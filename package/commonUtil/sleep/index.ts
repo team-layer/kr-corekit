@@ -4,7 +4,7 @@
  * @param ms 지연시킬 시간 (밀리초 단위)
  * @returns {Promise<void>} 시간이 지나면 resolve되는 Promise
  */
-export function sleep(ms: number): Promise<void> {
+export default function sleep(ms: number): Promise<void> {
   const delay = Math.max(0, ms | 0);
   return new Promise((resolve) => setTimeout(resolve, delay));
 }
