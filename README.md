@@ -66,6 +66,7 @@ const notEmpty = commonUtil.isEmpty("hello"); // false
 const nullCheck = commonUtil.isNull(null); // true
 const notNull = commonUtil.isNull("hello"); // false
 await commonUtil.sleep(1000); // Pauses execution for 1 second
+const copied = await commonUtil.copyToClipboard("Hello, World!"); // true if successful
 
 // Cookie utilities
 cookieUtil.setCookie("theme", "dark");
@@ -110,6 +111,7 @@ const formattedPhone = formatUtil.formatPhoneNumber("01012345678"); // "010-1234
 - `isEmpty(value: unknown): boolean` - Checks if a value is empty (null, undefined, "", 0, [], {}, empty Set/Map, NaN, or invalid Date)
 - `isNull(value: unknown): value is null` - Type guard that checks if a value is null and narrows the type
 - `sleep(ms: number): Promise<void>` - Pauses execution for a specified number of milliseconds
+- `copyToClipboard(text: string): Promise<boolean>` - Copies text to the user's clipboard. Uses modern Clipboard API with fallback to legacy execCommand method. Returns true if successful, false if failed.
 
 ### CookieUtil
 
