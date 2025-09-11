@@ -1,4 +1,4 @@
-export default function getAllQuery(): object {
+export default function getAllQuery(): Record<string, string | string[]> {
   if (window && typeof window.URLSearchParams === "undefined") {
     throw new Error("URLSearchParams is not supported in this environment.");
   }
