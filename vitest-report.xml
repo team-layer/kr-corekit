@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites name="vitest tests" tests="5" failures="0" errors="0" time="0.00300075">
-    <testsuite name="package/commonUtil/copyToClipboard/index.test.ts" timestamp="2025-09-11T08:34:04.771Z" hostname="users-MacBook-Pro.local" tests="5" failures="0" errors="0" skipped="0" time="0.00300075">
-        <testcase classname="package/commonUtil/copyToClipboard/index.test.ts" name="copyToClipboard &gt; 성공 케이스 &gt; 최신 Clipboard API를 사용하여 성공적으로 복사한다" time="0.001606541">
+<testsuites name="vitest tests" tests="6" failures="0" errors="0" time="0.002620875">
+    <testsuite name="package/deviceUtil/getDevice/index.test.ts" timestamp="2025-09-19T05:15:13.469Z" hostname="users-MacBook-Pro.local" tests="6" failures="0" errors="0" skipped="0" time="0.002620875">
+        <testcase classname="package/deviceUtil/getDevice/index.test.ts" name="getDevice &gt; SSR (Server-Side Rendering) 환경 &gt; window 객체가 없을 때, 기본 데스크톱 정보를 반환해야 합니다" time="0.001096292">
         </testcase>
-        <testcase classname="package/commonUtil/copyToClipboard/index.test.ts" name="copyToClipboard &gt; 성공 케이스 &gt; Clipboard API 실패 시, 레거시 execCommand 방식으로 대체하여 성공적으로 복사한다" time="0.000289792">
+        <testcase classname="package/deviceUtil/getDevice/index.test.ts" name="getDevice &gt; 클라이언트 (브라우저) 환경 &gt; 데스크톱 &gt; Windows Chrome User Agent를 데스크톱으로 인식해야 합니다" time="0.000288">
         </testcase>
-        <testcase classname="package/commonUtil/copyToClipboard/index.test.ts" name="copyToClipboard &gt; 실패 및 예외 케이스 &gt; 두 가지 방식 모두 실패하면 false를 반환한다" time="0.000157542">
+        <testcase classname="package/deviceUtil/getDevice/index.test.ts" name="getDevice &gt; 클라이언트 (브라우저) 환경 &gt; 모바일 &gt; iPhone User Agent를 모바일 및 iOS로 인식해야 합니다" time="0.000204708">
         </testcase>
-        <testcase classname="package/commonUtil/copyToClipboard/index.test.ts" name="copyToClipboard &gt; 실패 및 예외 케이스 &gt; 빈 문자열도 성공적으로 복사한다" time="0.000105666">
+        <testcase classname="package/deviceUtil/getDevice/index.test.ts" name="getDevice &gt; 클라이언트 (브라우저) 환경 &gt; 모바일 &gt; Android Phone User Agent를 모바일 및 Android로 인식해야 합니다" time="0.000102084">
         </testcase>
-        <testcase classname="package/commonUtil/copyToClipboard/index.test.ts" name="copyToClipboard &gt; 실패 및 예외 케이스 &gt; 매우 긴 텍스트가 주어지면 에러를 던지고 대체(fallback) 로직으로 복사를 시도한다" time="0.00016025">
+        <testcase classname="package/deviceUtil/getDevice/index.test.ts" name="getDevice &gt; 클라이언트 (브라우저) 환경 &gt; 태블릿 &gt; iPad User Agent를 태블릿 및 iOS로 인식해야 합니다" time="0.00009875">
+        </testcase>
+        <testcase classname="package/deviceUtil/getDevice/index.test.ts" name="getDevice &gt; 클라이언트 (브라우저) 환경 &gt; 태블릿 &gt; Android Tablet User Agent를 태블릿 및 Android로 인식해야 합니다" time="0.000103209">
         </testcase>
     </testsuite>
 </testsuites>
