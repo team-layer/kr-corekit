@@ -10,22 +10,10 @@
 /**
  * 사용자의 디바이스 환경 정보를 반환합니다.
  * window.navigator.userAgent를 기반으로 분석하며, 클라이언트 사이드에서만 정확한 값을 반환합니다.
- * 서버 사이드 렌더링(SSR) 환경에서는 에러를 방지하기 위해 기본값으로 데스크톱 환경 정보를 반환합니다.
  *
  * @returns {DeviceInfo} 디바이스 환경 정보 객체
  */
 export default function getDevice() {
-  // * ----- SSR 환경일 경우, 기본값(데스크톱)을 반환하여 에러 방지 ----- * //
-  if (typeof window === "undefined" || !window.navigator) {
-    return {
-      isMobile: false,
-      isTablet: false,
-      isDesktop: true,
-      isIOS: false,
-      isAndroid: false,
-    };
-  }
-
   // * ----- 클라이언트 환경일 경우, 실행 ----- * //
   const userAgent = window.navigator.userAgent;
 

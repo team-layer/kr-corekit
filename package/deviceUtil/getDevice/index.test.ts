@@ -23,30 +23,6 @@ describe("getDevice", () => {
     mockUserAgent("");
   });
 
-  // * ----- 1. SSR 환경 테스트 ----- * //
-  describe("SSR (Server-Side Rendering) 환경", () => {
-    test("window 객체가 없을 때, 기본 데스크톱 정보를 반환해야 합니다", () => {
-      // 'window' 객체를 일시적으로 없애서 SSR 환경을 시뮬레이션합니다.
-      const originalWindow = global.window;
-      // @ts-ignore: 'window' is a read-only property.
-      delete global.window;
-
-      const device = getDevice();
-
-      expect(device).toEqual({
-        isMobile: false,
-        isTablet: false,
-        isDesktop: true,
-        isIOS: false,
-        isAndroid: false,
-      });
-
-      // 다른 테스트에 영향을 주지 않도록 window 객체를 복원합니다.
-      global.window = originalWindow;
-    });
-  });
-
-  // * ----- 2. 클라이언트 환경 테스트 ----- * //
   describe("클라이언트 (브라우저) 환경", () => {
     describe("데스크톱", () => {
       test("Windows Chrome User Agent를 데스크톱으로 인식해야 합니다", () => {
