@@ -4,7 +4,7 @@ A comprehensive collection of TypeScript utility functions for modern web develo
 
 ## Features
 
-- 🛠️ **Comprehensive**: String, object, cookie, number, validation, format, search query, and common utilities
+- 🛠️ **Comprehensive**: String, object, cookie, number, validation, format, search query, device, and common utilities
 - 📦 **Tree-shakable**: Import only what you need
 - 🔒 **Type-safe**: Full TypeScript support with type definitions
 - ⚡ **Lightweight**: Minimal dependencies and optimized for performance
@@ -32,6 +32,7 @@ import {
   commonUtil,
   formatUtil,
   searchQueryUtil,
+  deviceUtil,
 } from "kr-corekit";
 
 // String utilities
@@ -71,6 +72,9 @@ const copied = await commonUtil.copyToClipboard("Hello, World!"); // true if suc
 
 // Search Query utilities
 const queryParams = searchQueryUtil.getAllQuery(); // { key: ["value1", "value2"], id: "123" }
+
+// Device utilities
+const device = deviceUtil.getDevice(); // { isMobile: false, isTablet: false, isDesktop: true, isIOS: false, isAndroid: false }
 
 // Cookie utilities
 cookieUtil.setCookie("theme", "dark");
@@ -120,6 +124,10 @@ const formattedPhone = formatUtil.formatPhoneNumber("01012345678"); // "010-1234
 ### SearchQueryUtil
 
 - `getAllQuery(): Record<string, string | string[]>` - Parses the current URL's query string and returns an object with key-value pairs. Values appear as arrays when the same key is used multiple times.
+
+### DeviceUtil
+
+- `getDevice(): DeviceInfo` - Detects the user's device environment. Returns information about device type (mobile/tablet/desktop) and operating system (iOS/Android). Uses navigator.userAgent for detection and provides safe fallback for SSR environments.
 
 ### CookieUtil
 
