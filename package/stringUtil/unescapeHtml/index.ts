@@ -1,4 +1,4 @@
-export default function unescapeHtml(str: string): string {
+export default function unescapeHtml(str: string | null | undefined): string | null | undefined {
   if (str == null) return str;
   return str
     .replace(/&amp;/g, "&")
