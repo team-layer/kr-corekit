@@ -1,1 +1,1 @@
-export { default as inPlainObject } from "./isPlainObject";
+export { default as isPlainObject } from "./isPlainObject";
