@@ -4,7 +4,7 @@ A comprehensive collection of TypeScript utility functions for modern web develo
 
 ## Features
 
-- 🛠️ **Comprehensive**: String, object, cookie, number, validation, format, search query, type, and common utilities
+- 🛠️ **Comprehensive**: String, object, cookie, number, validation, format, search query, device, type and common utilities
 - 📦 **Tree-shakable**: Import only what you need
 - 🔒 **Type-safe**: Full TypeScript support with type definitions
 - ⚡ **Lightweight**: Minimal dependencies and optimized for performance
@@ -33,6 +33,7 @@ import {
   formatUtil,
   searchQueryUtil,
   typeUtil,
+  deviceUtil,
 } from "kr-corekit";
 
 // String utilities
@@ -78,6 +79,9 @@ const queryParams = searchQueryUtil.getAllQuery(); // { key: ["value1", "value2"
 // Type utilities
 const isPlain = typeUtil.isPlainObject({}); // true
 const isNotPlain = typeUtil.isPlainObject(new Date()); // false
+
+// Device utilities
+const device = deviceUtil.getDevice(); // { isMobile: false, isTablet: false, isDesktop: true, isIOS: false, isAndroid: false }
 
 // Cookie utilities
 cookieUtil.setCookie("theme", "dark");
@@ -133,6 +137,10 @@ const formattedPhone = formatUtil.formatPhoneNumber("01012345678"); // "010-1234
 ### TypeUtil
 
 - `isPlainObject(value: unknown): boolean` - Checks if a value is a plain object (created by Object literal or Object.create(null)), excluding arrays, dates, and other built-in objects.
+
+### DeviceUtil
+
+- `getDevice(): DeviceInfo` - Detects the user's device environment. Returns information about device type (mobile/tablet/desktop) and operating system (iOS/Android). Uses navigator.userAgent for detection and provides safe fallback for SSR environments.
 
 ### CookieUtil
 

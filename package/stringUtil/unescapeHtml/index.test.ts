@@ -7,7 +7,7 @@ test("HTML 특수 문자를 언이스케이프한다.", () => {
   expect(output).toBe("<span> 안녕하세요 </span>");
 });
 
-describe("unsecapeHtml 유틸 함수 테스트", () => {
+describe("unescapeHtml 유틸 함수 테스트", () => {
   test("여러 HTML 특수 문자를 포함한 문자열을 올바르게 언이스케이프한다", () => {
     const input =
       "Tom &amp; Jerry &lt;3 &quot;Best Friends&quot; &#39;Forever&#39; &#x2F; Fun";
