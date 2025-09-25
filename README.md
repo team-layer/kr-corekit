@@ -69,6 +69,8 @@ const nullCheck = commonUtil.isNull(null); // true
 const notNull = commonUtil.isNull("hello"); // false
 await commonUtil.sleep(1000); // Pauses execution for 1 second
 const copied = await commonUtil.copyToClipboard("Hello, World!"); // true if successful
+const encoded = commonUtil.encodeBase64("Hello 한글!"); // Base64 encoded string
+const decoded = commonUtil.decodeBase64(encoded); // "Hello 한글!"
 
 // Search Query utilities
 const queryParams = searchQueryUtil.getAllQuery(); // { key: ["value1", "value2"], id: "123" }
@@ -121,6 +123,8 @@ const formattedPhone = formatUtil.formatPhoneNumber("01012345678"); // "010-1234
 - `isNull(value: unknown): value is null` - Type guard that checks if a value is null and narrows the type
 - `sleep(ms: number): Promise<void>` - Pauses execution for a specified number of milliseconds
 - `copyToClipboard(text: string): Promise<boolean>` - Copies text to the user's clipboard. Uses modern Clipboard API with fallback to legacy execCommand method. Returns true if successful, false if failed.
+- `encodeBase64(str: string, options?: { convertSpecialChars?: boolean }): string` - Encodes a string to Base64 format with optional special character handling
+- `decodeBase64(str: string, options?: { convertSpecialChars?: boolean }): string` - Decodes a Base64 string back to original text with optional special character handling
 
 ### SearchQueryUtil
 

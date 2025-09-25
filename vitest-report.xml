@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites name="vitest tests" tests="5" failures="0" errors="0" time="0.00300075">
-    <testsuite name="package/commonUtil/copyToClipboard/index.test.ts" timestamp="2025-09-11T08:34:04.771Z" hostname="users-MacBook-Pro.local" tests="5" failures="0" errors="0" skipped="0" time="0.00300075">
-        <testcase classname="package/commonUtil/copyToClipboard/index.test.ts" name="copyToClipboard &gt; 성공 케이스 &gt; 최신 Clipboard API를 사용하여 성공적으로 복사한다" time="0.001606541">
+<testsuites name="vitest tests" tests="6" failures="0" errors="0" time="0.002156208">
+    <testsuite name="package/commonUtil/encodeBase64/indes.test.ts" timestamp="2025-09-25T14:42:58.765Z" hostname="klmhyeonwooui-MacBookPro.local" tests="6" failures="0" errors="0" skipped="0" time="0.002156208">
+        <testcase classname="package/commonUtil/encodeBase64/indes.test.ts" name="encodeBase64 유틸 함수 테스트 &gt; 정상적인 문자열을 Base64로 인코딩해야 한다" time="0.000807042">
         </testcase>
-        <testcase classname="package/commonUtil/copyToClipboard/index.test.ts" name="copyToClipboard &gt; 성공 케이스 &gt; Clipboard API 실패 시, 레거시 execCommand 방식으로 대체하여 성공적으로 복사한다" time="0.000289792">
+        <testcase classname="package/commonUtil/encodeBase64/indes.test.ts" name="encodeBase64 유틸 함수 테스트 &gt; 빈 문자열을 인코딩하면 빈 문자열을 반환해야 한다" time="0.000093625">
         </testcase>
-        <testcase classname="package/commonUtil/copyToClipboard/index.test.ts" name="copyToClipboard &gt; 실패 및 예외 케이스 &gt; 두 가지 방식 모두 실패하면 false를 반환한다" time="0.000157542">
+        <testcase classname="package/commonUtil/encodeBase64/indes.test.ts" name="encodeBase64 유틸 함수 테스트 &gt; 특수 문자가 포함된 문자열을 올바르게 인코딩해야 한다" time="0.000173709">
         </testcase>
-        <testcase classname="package/commonUtil/copyToClipboard/index.test.ts" name="copyToClipboard &gt; 실패 및 예외 케이스 &gt; 빈 문자열도 성공적으로 복사한다" time="0.000105666">
+        <testcase classname="package/commonUtil/encodeBase64/indes.test.ts" name="encodeBase64 유틸 함수 테스트 &gt; 유니코드 문자가 포함된 문자열을 올바르게 인코딩해야 한다" time="0.000156042">
         </testcase>
-        <testcase classname="package/commonUtil/copyToClipboard/index.test.ts" name="copyToClipboard &gt; 실패 및 예외 케이스 &gt; 매우 긴 텍스트가 주어지면 에러를 던지고 대체(fallback) 로직으로 복사를 시도한다" time="0.00016025">
+        <testcase classname="package/commonUtil/encodeBase64/indes.test.ts" name="encodeBase64 유틸 함수 테스트 &gt; null 또는 undefined를 인코딩하면 그대로 반환해야 한다" time="0.000235916">
+        </testcase>
+        <testcase classname="package/commonUtil/encodeBase64/indes.test.ts" name="encodeBase64 유틸 함수 테스트 &gt; 한글이 들어오면 올바르게 인코딩해야 한다" time="0.000069459">
         </testcase>
     </testsuite>
 </testsuites>
