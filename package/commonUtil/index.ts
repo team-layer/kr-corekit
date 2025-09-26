@@ -2,3 +2,5 @@ export { default as isEmpty } from "./isEmpty";
 export { default as isNull } from "./isNull";
 export { default as sleep } from "./sleep";
 export { default as copyToClipboard } from "./copyToClipboard";
+export { default as encodeBase64 } from "./encodeBase64";
+export { default as decodeBase64 } from "./decodeBase64";
