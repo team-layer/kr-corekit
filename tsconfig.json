@@ -20,5 +20,6 @@
     "declaration": true,
     "outDir": "dist/types"
   },
-  "include": ["package"]
+  "include": ["package"],
+  "exclude": ["**/*.test.ts", "**/*.spec.ts", "node_modules", "dist"]
 }

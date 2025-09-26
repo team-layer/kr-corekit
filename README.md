@@ -22,6 +22,8 @@ yarn add kr-corekit
 
 ## Usage
 
+### Full Import (All utilities)
+
 ```typescript
 import {
   stringUtil,
@@ -89,6 +91,33 @@ const theme = cookieUtil.getCookie("theme");
 // Format utilities
 const formattedPhone = formatUtil.formatPhoneNumber("01012345678"); // "010-1234-5678"
 ```
+
+### Tree-Shaking Optimized Import (Recommended)
+
+For optimal bundle size, import only the functions you need:
+
+```typescript
+// Option 1: Import specific functions (best tree-shaking)
+import { escapeHtml, unescapeHtml } from "kr-corekit";
+import { sum, multiply } from "kr-corekit";
+import { clearNullProperties, deepFreeze } from "kr-corekit";
+
+// Option 2: Import from specific utility modules (good tree-shaking)
+import { escapeHtml } from "kr-corekit/stringUtil";
+import { sum } from "kr-corekit/numberUtil";
+import { clearNullProperties } from "kr-corekit/objectUtil";
+
+// Usage remains the same
+const escaped = escapeHtml("<div>Hello</div>");
+const total = sum(1, 2, 3, 4, 5);
+const cleaned = clearNullProperties({ a: 1, b: null, c: 3 });
+```
+
+### Bundle Size Comparison
+
+- **Full import**: ~8.3KB (2.9KB gzipped)
+- **Tree-shaken import**: Only includes functions you use
+- **Individual module import**: Further optimized for specific utilities
 
 ## API Reference
 

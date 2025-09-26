@@ -23,16 +23,69 @@
   "license": "MIT",
   "type": "module",
   "main": "dist/bundle/kr-corekit.js",
+  "sideEffects": false,
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
       "require": "./dist/bundle/kr-corekit.cjs",
       "import": "./dist/bundle/kr-corekit.js"
+    },
+    "./stringUtil": {
+      "types": "./dist/types/stringUtil/index.d.ts",
+      "require": "./dist/types/stringUtil/index.js",
+      "import": "./dist/types/stringUtil/index.js"
+    },
+    "./objectUtil": {
+      "types": "./dist/types/objectUtil/index.d.ts",
+      "require": "./dist/types/objectUtil/index.js",
+      "import": "./dist/types/objectUtil/index.js"
+    },
+    "./cookieUtil": {
+      "types": "./dist/types/cookieUtil/index.d.ts",
+      "require": "./dist/types/cookieUtil/index.js",
+      "import": "./dist/types/cookieUtil/index.js"
+    },
+    "./numberUtil": {
+      "types": "./dist/types/numberUtil/index.d.ts",
+      "require": "./dist/types/numberUtil/index.js",
+      "import": "./dist/types/numberUtil/index.js"
+    },
+    "./validationUtil": {
+      "types": "./dist/types/validationUtil/index.d.ts",
+      "require": "./dist/types/validationUtil/index.js",
+      "import": "./dist/types/validationUtil/index.js"
+    },
+    "./commonUtil": {
+      "types": "./dist/types/commonUtil/index.d.ts",
+      "require": "./dist/types/commonUtil/index.js",
+      "import": "./dist/types/commonUtil/index.js"
+    },
+    "./searchQueryUtil": {
+      "types": "./dist/types/searchQueryUtil/index.d.ts",
+      "require": "./dist/types/searchQueryUtil/index.js",
+      "import": "./dist/types/searchQueryUtil/index.js"
+    },
+    "./typeUtil": {
+      "types": "./dist/types/typeUtil/index.d.ts",
+      "require": "./dist/types/typeUtil/index.js",
+      "import": "./dist/types/typeUtil/index.js"
+    },
+    "./formatUtil": {
+      "types": "./dist/types/formatUtil/index.d.ts",
+      "require": "./dist/types/formatUtil/index.js",
+      "import": "./dist/types/formatUtil/index.js"
+    },
+    "./deviceUtil": {
+      "types": "./dist/types/deviceUtil/index.d.ts",
+      "require": "./dist/types/deviceUtil/index.js",
+      "import": "./dist/types/deviceUtil/index.js"
     }
   },
   "scripts": {
     "build": "tsc && vite build",
-    "preview": "vite preview",
+    "build:analyze": "npm run build && npm run analyze:bundle",
+    "analyze:bundle": "echo 'Bundle Analysis:' && du -h dist/bundle/* && echo '\\nGzipped sizes:' && gzip -c dist/bundle/kr-corekit.js | wc -c | awk '{print \"ESM: \" $1/1024 \" KB\"}' && gzip -c dist/bundle/kr-corekit.cjs | wc -c | awk '{print \"CJS: \" $1/1024 \" KB\"}'",
+    "pack:preview": "npm pack --dry-run",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
