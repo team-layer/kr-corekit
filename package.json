@@ -84,7 +84,7 @@
   "scripts": {
     "build": "tsc && vite build",
     "build:analyze": "npm run build && npm run analyze:bundle",
-    "analyze:bundle": "echo 'Bundle Analysis:' && du -h dist/bundle/* && echo '\\nGzipped sizes:' && gzip -c dist/bundle/kr-corekit.js | wc -c | awk '{print \"ESM: \" $1/1024 \" KB\"}' && gzip -c dist/bundle/kr-corekit.umd.cjs | wc -c | awk '{print \"UMD: \" $1/1024 \" KB\"}'",
+    "analyze:bundle": "echo 'Bundle Analysis:' && du -h dist/bundle/* && echo '\\nGzipped sizes:' && gzip -c dist/bundle/kr-corekit.js | wc -c | awk '{print \"ESM: \" $1/1024 \" KB\"}' && gzip -c dist/bundle/kr-corekit.cjs | wc -c | awk '{print \"CJS: \" $1/1024 \" KB\"}'",
     "preview": "vite preview",
     "test": "vitest",
     "coverage": "vitest run --coverage"
