@@ -74,6 +74,7 @@ await commonUtil.sleep(1000); // Pauses execution for 1 second
 const copied = await commonUtil.copyToClipboard("Hello, World!"); // true if successful
 const encoded = commonUtil.encodeBase64("Hello 한글!"); // Base64 encoded string
 const decoded = commonUtil.decodeBase64(encoded); // "Hello 한글!"
+const debouncedFn = commonUtil.debounce(() => console.log("Called!"), 300); // Debounced function
 
 // Search Query utilities
 const queryParams = searchQueryUtil.getAllQuery(); // { key: ["value1", "value2"], id: "123" }
@@ -158,6 +159,7 @@ const cleaned = clearNullProperties({ a: 1, b: null, c: 3 });
 - `copyToClipboard(text: string): Promise<boolean>` - Copies text to the user's clipboard. Uses modern Clipboard API with fallback to legacy execCommand method. Returns true if successful, false if failed.
 - `encodeBase64(str: string, options?: { convertSpecialChars?: boolean }): string` - Encodes a string to Base64 format with optional special character handling
 - `decodeBase64(str: string, options?: { convertSpecialChars?: boolean }): string` - Decodes a Base64 string back to original text with optional special character handling
+- `debounce<T>(fn: T, delay?: number): (...args: Parameters<T>) => void` - Creates a debounced function that delays execution until after a specified delay (default 300ms) has passed since its last invocation
 
 ### SearchQueryUtil
 

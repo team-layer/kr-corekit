@@ -7,6 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+vitest-report.xml
 node_modules
 dist
 *.local
@@ -21,5 +22,3 @@ dist
 *.njsproj
 *.sln
 *.sw?
-
-vitest-report.xml
