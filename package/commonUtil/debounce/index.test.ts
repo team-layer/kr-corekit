@@ -1,4 +1,4 @@
-import { describe } from "node:test";
+import { describe } from "vitest";
 import { afterEach, expect, test, vi } from "vitest";
 import debounce from "./index";
 
