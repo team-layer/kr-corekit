@@ -5,4 +5,5 @@ export { default as copyToClipboard } from "./copyToClipboard";
 export { default as encodeBase64 } from "./encodeBase64";
 export { default as decodeBase64 } from "./decodeBase64";
 export { default as debounce } from "./debounce";
+export { default as throttle } from "./throttle";
 export { default as storage } from "./storage";
