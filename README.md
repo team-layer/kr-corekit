@@ -4,7 +4,7 @@ A comprehensive collection of TypeScript utility functions for modern web develo
 
 ## Features
 
-- 🛠️ **Comprehensive**: String, object, cookie, number, validation, format, search query, device, type and common utilities
+- 🛠️ **Comprehensive**: String, object, cookie, number, validation, format, search query, device, type, storage and common utilities
 - 📦 **Tree-shakable**: Import only what you need
 - 🔒 **Type-safe**: Full TypeScript support with type definitions
 - ⚡ **Lightweight**: Minimal dependencies and optimized for performance
@@ -77,6 +77,11 @@ const decoded = commonUtil.decodeBase64(encoded); // "Hello 한글!"
 const debouncedFn = commonUtil.debounce(() => console.log("Called!"), 300); // Debounced function
 const throttledFn = commonUtil.throttle(() => console.log("Throttled!"), 300); // Throttled function
 
+// Storage
+commonUtil.storage.set("user", { id: 1, name: "John" }); // Stores object in localStorage
+const user = commonUtil.storage.get<{ id: number; name: string }>("user"); // Retrieves typed object
+commonUtil.storage.remove("user"); // Removes item from localStorage
+
 // Search Query utilities
 const queryParams = searchQueryUtil.getAllQuery(); // { key: ["value1", "value2"], id: "123" }
 
@@ -108,11 +113,13 @@ import { clearNullProperties, deepFreeze } from "kr-corekit";
 import { escapeHtml } from "kr-corekit/stringUtil";
 import { sum } from "kr-corekit/numberUtil";
 import { clearNullProperties } from "kr-corekit/objectUtil";
+import { storage } from "kr-corekit/commonUtil";
 
 // Usage remains the same
 const escaped = escapeHtml("<div>Hello</div>");
 const total = sum(1, 2, 3, 4, 5);
 const cleaned = clearNullProperties({ a: 1, b: null, c: 3 });
+storage.set("data", { key: "value" });
 ```
 
 ### Bundle Size Comparison
@@ -152,6 +159,19 @@ const cleaned = clearNullProperties({ a: 1, b: null, c: 3 });
 - `checkBase64(value: string): boolean` - Validates whether a string is a valid base64 encoded value
 - `checkPassword(password: string, options?: { minLength?: number; maxLength?: number; requireUppercase?: boolean; requireLowercase?: boolean; requireNumber?: boolean; requireSpecialChar?: boolean }): boolean` - Validates password strength and requirements
 
+### StorageUtil
+
+- `set<T>(key: string, value: T): void` - Stores a value in localStorage with automatic JSON serialization. Supports objects, arrays, and primitive types. Safe for SSR environments.
+- `get<T>(key: string): T | null` - Retrieves a value from localStorage with automatic JSON parsing. Returns null if key doesn't exist or parsing fails. Type-safe with generic support.
+- `remove(key: string): void` - Removes a specific item from localStorage. Safe for SSR environments.
+
+**Features:**
+
+- 🔒 **SSR Safe**: All methods handle server-side rendering environments gracefully
+- 📦 **Type Safe**: Full TypeScript support with generics
+- 🛡️ **Error Handling**: Comprehensive error handling with automatic cleanup of corrupted data
+- 🔄 **Auto Serialization**: Automatic JSON serialization/deserialization for complex data types
+
 ### CommonUtil
 
 - `isEmpty(value: unknown): boolean` - Checks if a value is empty (null, undefined, "", 0, [], {}, empty Set/Map, NaN, or invalid Date)
@@ -162,6 +182,16 @@ const cleaned = clearNullProperties({ a: 1, b: null, c: 3 });
 - `decodeBase64(str: string, options?: { convertSpecialChars?: boolean }): string` - Decodes a Base64 string back to original text with optional special character handling
 - `debounce<T>(fn: T, delay?: number): (...args: Parameters<T>) => void` - Creates a debounced function that delays execution until after a specified delay (default 300ms) has passed since its last invocation
 - `throttle<T>(fn: T, limit?: number): (...args: Parameters<T>) => void` - Creates a throttled function that only executes at most once per specified time interval (default 300ms), ignoring subsequent calls within the limit
+- `storage.set<T>(key: string, value: T): void` - Stores a value in localStorage with automatic JSON serialization. Supports objects, arrays, and primitive types. Safe for SSR environments.
+- `storage.get<T>(key: string): T | null` - Retrieves a value from localStorage with automatic JSON parsing. Returns null if key doesn't exist or parsing fails. Type-safe with generic support.
+- `storage.remove(key: string): void` - Removes a specific item from localStorage. Safe for SSR environments.
+
+**Storage Features:**
+
+- 🔒 **SSR Safe**: All methods handle server-side rendering environments gracefully
+- 📦 **Type Safe**: Full TypeScript support with generics
+- 🛡️ **Error Handling**: Comprehensive error handling with automatic cleanup of corrupted data
+- 🔄 **Auto Serialization**: Automatic JSON serialization/deserialization for complex data types
 
 ### SearchQueryUtil
 
