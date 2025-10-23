@@ -87,7 +87,10 @@
     "analyze:bundle": "echo 'Bundle Analysis:' && du -h dist/bundle/* && echo '\\nGzipped sizes:' && gzip -c dist/bundle/kr-corekit.js | wc -c | awk '{print \"ESM: \" $1/1024 \" KB\"}' && gzip -c dist/bundle/kr-corekit.cjs | wc -c | awk '{print \"CJS: \" $1/1024 \" KB\"}'",
     "pack:preview": "npm pack --dry-run",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "release:patch": "pnpm version patch && git push origin main --follow-tags",
+    "release:minor": "pnpm version minor && git push origin main --follow-tags",
+    "release:major": "pnpm version major && git push origin main --follow-tags"
   },
   "repository": {
     "type": "git",
