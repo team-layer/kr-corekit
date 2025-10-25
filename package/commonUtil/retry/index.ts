@@ -12,7 +12,6 @@ export default async function retry<T>(
       if (count > loop) {
         throw e;
       }
-      console.error(`Retry attempt ${count} / ${loop} failed:`, e);
       return attempt();
     }
   };
