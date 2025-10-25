@@ -1,0 +1,46 @@
+# .github/workflows/publish.yml
+name: Publish Package to npm on Tag
+
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+" # vX.Y.Z 형식의 태그가 푸시될 때 실행
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read # 코드를 읽기만 하면 됨
+      id-token: write # npm 인증을 위해 필요할 수 있음
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        # 자동으로 트리거된 태그의 코드를 가져옴
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20" # 사용할 Node.js 버전
+          registry-url: "https://registry.npmjs.org/"
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run tests
+        run: pnpm test
+
+      - name: Build package
+        run: pnpm run build
+
+      - name: Package preview (dry-run)
+        run: pnpm run pack:preview
+
+      - name: Publish package to npm
+        run: pnpm publish --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_GRANULAR_TOKEN }}

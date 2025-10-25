@@ -7,3 +7,4 @@ export { default as decodeBase64 } from "./decodeBase64";
 export { default as debounce } from "./debounce";
 export { default as throttle } from "./throttle";
 export { default as retry } from "./retry";
+export { default as storage } from "./storage";
