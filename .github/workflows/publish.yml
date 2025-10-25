@@ -4,7 +4,7 @@ name: Publish Package to npm on Tag
 on:
   push:
     tags:
-      - "v[0-9]+.[0-9]+.[0-9]+" # vX.Y.Z 형식의 태그가 푸시될 때 실행
+      - "[0-9]+.[0-9]+.[0-9]+" # X.Y.Z 형식의 태그가 푸시될 때 실행
 
 jobs:
   publish:
@@ -26,7 +26,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 8
+          version: 9
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
