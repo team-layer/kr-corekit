@@ -198,7 +198,6 @@ storage.set("data", { key: "value" });
 - `decodeBase64(str: string, options?: { convertSpecialChars?: boolean }): string` - Decodes a Base64 string back to original text with optional special character handling
 - `debounce<T>(fn: T, delay?: number): (...args: Parameters<T>) => void` - Creates a debounced function that delays execution until after a specified delay (default 300ms) has passed since its last invocation
 - `throttle<T>(fn: T, limit?: number): (...args: Parameters<T>) => void` - Creates a throttled function that only executes at most once per specified time interval (default 300ms), ignoring subsequent calls within the limit
-  <<<<<<< HEAD
 - `storage.set<T>(key: string, value: T): void` - Stores a value in localStorage with automatic JSON serialization. Supports objects, arrays, and primitive types. Safe for SSR environments.
 - `storage.get<T>(key: string): T | null` - Retrieves a value from localStorage with automatic JSON parsing. Returns null if key doesn't exist or parsing fails. Type-safe with generic support.
 - `storage.remove(key: string): void` - Removes a specific item from localStorage. Safe for SSR environments.
@@ -210,7 +209,6 @@ storage.set("data", { key: "value" });
 - 🛡️ **Error Handling**: Comprehensive error handling with automatic cleanup of corrupted data
 - # 🔄 **Auto Serialization**: Automatic JSON serialization/deserialization for complex data types
 - `retry<T>(fn: () => Promise<T>, loop?: number): Promise<T>` - Retries an asynchronous function up to the specified number of times (default 3) if it fails. Uses closure to maintain retry count and automatically re-attempts on error. Returns the result of the first successful execution or throws the last error if all retries fail.
-  > > > > > > > 0f784f4 (docs: Add retry utility markdown docs)
 
 ### SearchQueryUtil
 
