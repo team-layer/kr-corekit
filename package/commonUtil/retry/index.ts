@@ -9,7 +9,7 @@ export default async function retry<T>(
       return await fn();
     } catch (e) {
       count++;
-      if (count > loop) {
+      if (count >= loop) {
         throw e;
       }
       return attempt();
