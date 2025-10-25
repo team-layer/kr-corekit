@@ -208,8 +208,10 @@ storage.set("data", { key: "value" });
 - 📦 **Type Safe**: Full TypeScript support with generics
 - 🛡️ **Error Handling**: Comprehensive error handling with automatic cleanup of corrupted data
 - 🔄 **Auto Serialization**: Automatic JSON serialization/deserialization for complex data types
-- `retry<T>(fn: () => Promise<T>, loop?: number): Promise<T>` - Retries an asynchronous function up to the specified number of times (default 3) if it fails. Uses closure to maintain retry count and automatically re-attempts on error. Returns the result of the first successful execution or throws the last error if all retries fail.
 
+### Retry
+
+- `retry<T>(fn: () => Promise<T>, loop?: number): Promise<T>` - Retries an asynchronous function up to the specified number of times (default 3) if it fails. Automatically re-attempts on error and returns the result of the first successful execution, or throws the last error if all retries fail.
 ### SearchQueryUtil
 
 - `getAllQuery(): Record<string, string | string[]>` - Parses the current URL's query string and returns an object with key-value pairs. Values appear as arrays when the same key is used multiple times.
