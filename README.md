@@ -82,6 +82,22 @@ commonUtil.storage.set("user", { id: 1, name: "John" }); // Stores object in loc
 const user = commonUtil.storage.get<{ id: number; name: string }>("user"); // Retrieves typed object
 commonUtil.storage.remove("user"); // Removes item from localStorage
 
+// Retry utilities
+const result = await commonUtil.retry(async () => {
+  const response = await fetch("/api/data");
+  if (!response.ok) throw new Error("API failed");
+  return response.json();
+}, 3); // Retry up to 3 times
+
+// More retry examples
+const userData = await commonUtil.retry(async () => {
+  return await fetchUserData();
+}); // Uses default 3 retries
+
+const fileUpload = await commonUtil.retry(async () => {
+  return await uploadFile(file);
+}, 5); // Custom retry count
+
 // Search Query utilities
 const queryParams = searchQueryUtil.getAllQuery(); // { key: ["value1", "value2"], id: "123" }
 
@@ -193,6 +209,9 @@ storage.set("data", { key: "value" });
 - 🛡️ **Error Handling**: Comprehensive error handling with automatic cleanup of corrupted data
 - 🔄 **Auto Serialization**: Automatic JSON serialization/deserialization for complex data types
 
+### Retry
+
+- `retry<T>(fn: () => Promise<T>, loop?: number): Promise<T>` - Retries an asynchronous function up to the specified number of times (default 3) if it fails. Automatically re-attempts on error and returns the result of the first successful execution, or throws the last error if all retries fail.
 ### SearchQueryUtil
 
 - `getAllQuery(): Record<string, string | string[]>` - Parses the current URL's query string and returns an object with key-value pairs. Values appear as arrays when the same key is used multiple times.
