@@ -23,6 +23,9 @@
   "license": "MIT",
   "type": "module",
   "main": "dist/bundle/kr-corekit.js",
+  "config": {
+    "tag-version-prefix": ""
+  },
   "sideEffects": false,
   "exports": {
     ".": {
