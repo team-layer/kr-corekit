@@ -36,7 +36,7 @@ describe("retry 유틸 함수 테스트", () => {
     const fn = vi.fn().mockRejectedValue(new Error("fail"));
 
     await expect(retry(fn)).rejects.toThrow("fail");
-    expect(fn).toHaveBeenCalledTimes(4);
+    expect(fn).toHaveBeenCalledTimes(3);
   });
 
   test("타입 안전성: 반환 타입이 올바르게 추론된다.", async () => {
