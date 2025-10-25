@@ -207,7 +207,7 @@ storage.set("data", { key: "value" });
 - 🔒 **SSR Safe**: All methods handle server-side rendering environments gracefully
 - 📦 **Type Safe**: Full TypeScript support with generics
 - 🛡️ **Error Handling**: Comprehensive error handling with automatic cleanup of corrupted data
-- # 🔄 **Auto Serialization**: Automatic JSON serialization/deserialization for complex data types
+- 🔄 **Auto Serialization**: Automatic JSON serialization/deserialization for complex data types
 - `retry<T>(fn: () => Promise<T>, loop?: number): Promise<T>` - Retries an asynchronous function up to the specified number of times (default 3) if it fails. Uses closure to maintain retry count and automatically re-attempts on error. Returns the result of the first successful execution or throws the last error if all retries fail.
 
 ### SearchQueryUtil
