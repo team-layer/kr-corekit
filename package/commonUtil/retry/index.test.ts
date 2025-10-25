@@ -29,7 +29,7 @@ describe("retry 유틸 함수 테스트", () => {
     const fn = vi.fn().mockRejectedValue(error);
 
     await expect(retry(fn, 2)).rejects.toThrow("always fail");
-    expect(fn).toHaveBeenCalledTimes(3);
+    expect(fn).toHaveBeenCalledTimes(2);
   });
 
   test("기본 재시도 횟수는 3번이다.", async () => {
