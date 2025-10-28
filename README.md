@@ -166,6 +166,7 @@ storage.set("data", { key: "value" });
 ### FormatUtil
 
 - `formatPhoneNumber(phone: string): string` - Formats a phone number string to a standard format (e.g., "010-1234-5678")
+- `formatNumberWithCommas(value: number | string | null | undefined): string` - Converts numbers or strings to comma-separated format (e.g., "1,234,567"). Returns empty string for null/undefined values.
 
 ### ValidationUtil
 
