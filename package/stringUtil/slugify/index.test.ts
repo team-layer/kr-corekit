@@ -43,4 +43,10 @@ describe("slugify", () => {
     expect(slugify("안녕하세요 Hello World")).toBe("안녕하세요-hello-world");
     expect(slugify("프로젝트 개발")).toBe("프로젝트-개발");
   });
+
+  test("slug 형태의 문자열은 그대로 slug 형태로 반환한다.", () => {
+    const input = "Hello-World";
+    const output = slugify(input);
+    expect(output).toBe("hello-world");
+  });
 });
