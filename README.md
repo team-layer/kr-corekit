@@ -41,6 +41,7 @@ import {
 // String utilities
 const escaped = stringUtil.escapeHtml("<div>Hello</div>");
 const unescaped = stringUtil.unescapeHtml("&lt;div&gt;Hello&lt;/div&gt;");
+const slug = stringUtil.slugify("Hello World! 안녕하세요"); // "hello-world-안녕하세요"
 
 // Object utilities
 const cleaned = objectUtil.clearNullProperties({ a: 1, b: null, c: 3 });
@@ -150,6 +151,7 @@ storage.set("data", { key: "value" });
 
 - `escapeHtml(str: string): string` - Escapes HTML special characters
 - `unescapeHtml(str: string): string` - Unescapes HTML entities
+- `slugify(text: string): string` - Converts a string to URL-friendly slug format. Replaces spaces with hyphens, removes special characters, converts to lowercase, and supports Korean characters (e.g., "Hello World! 안녕" → "hello-world-안녕")
 
 ### ObjectUtil
 
@@ -213,6 +215,7 @@ storage.set("data", { key: "value" });
 ### Retry
 
 - `retry<T>(fn: () => Promise<T>, loop?: number): Promise<T>` - Retries an asynchronous function up to the specified number of times (default 3) if it fails. Automatically re-attempts on error and returns the result of the first successful execution, or throws the last error if all retries fail.
+
 ### SearchQueryUtil
 
 - `getAllQuery(): Record<string, string | string[]>` - Parses the current URL's query string and returns an object with key-value pairs. Values appear as arrays when the same key is used multiple times.
