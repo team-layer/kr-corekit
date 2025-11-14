@@ -79,6 +79,11 @@
       "types": "./dist/types/deviceUtil/index.d.ts",
       "require": "./dist/types/deviceUtil/index.js",
       "import": "./dist/types/deviceUtil/index.js"
+    },
+    "./easterEggUtil": {
+      "types": "./dist/types/easterEggUtil/index.d.ts",
+      "require": "./dist/types/easterEggUtil/index.js",
+      "import": "./dist/types/easterEggUtil/index.js"
     }
   },
   "scripts": {

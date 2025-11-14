@@ -4,7 +4,7 @@ A comprehensive collection of TypeScript utility functions for modern web develo
 
 ## Features
 
-- 🛠️ **Comprehensive**: String, object, cookie, number, validation, format, search query, device, type, storage and common utilities
+- 🛠️ **Comprehensive**: String, object, cookie, number, validation, format, search query, device, type, storage, easter egg and common utilities
 - 📦 **Tree-shakable**: Import only what you need
 - 🔒 **Type-safe**: Full TypeScript support with type definitions
 - ⚡ **Lightweight**: Minimal dependencies and optimized for performance
@@ -36,6 +36,7 @@ import {
   searchQueryUtil,
   typeUtil,
   deviceUtil,
+  easterEggUtil,
 } from "kr-corekit";
 
 // String utilities
@@ -109,6 +110,10 @@ const isNotPlain = typeUtil.isPlainObject(new Date()); // false
 // Device utilities
 const device = deviceUtil.getDevice(); // { isMobile: false, isTablet: false, isDesktop: true, isIOS: false, isAndroid: false }
 
+// Easter Egg utilities - Encouraging messages for developers
+easterEggUtil.generateHappy(); // [5:28:35 AM] Progress, not perfection. 🚀
+easterEggUtil.generateHappy("Custom message! 🎉"); // [5:28:35 AM] Custom message! 🎉
+
 // Cookie utilities
 cookieUtil.setCookie("theme", "dark");
 const theme = cookieUtil.getCookie("theme");
@@ -125,12 +130,14 @@ For optimal bundle size, import only the functions you need:
 import { escapeHtml, unescapeHtml } from "kr-corekit";
 import { sum, multiply } from "kr-corekit";
 import { clearNullProperties, deepFreeze } from "kr-corekit";
+import { generateHappy } from "kr-corekit";
 
 // Option 2: Import from specific utility modules (good tree-shaking)
 import { escapeHtml } from "kr-corekit/stringUtil";
 import { sum } from "kr-corekit/numberUtil";
 import { clearNullProperties } from "kr-corekit/objectUtil";
 import { storage } from "kr-corekit/commonUtil";
+import { generateHappy } from "kr-corekit/easterEggUtil";
 
 // Usage remains the same
 const escaped = escapeHtml("<div>Hello</div>");
@@ -227,6 +234,10 @@ storage.set("data", { key: "value" });
 ### DeviceUtil
 
 - `getDevice(): DeviceInfo` - Detects the user's device environment. Returns information about device type (mobile/tablet/desktop) and operating system (iOS/Android). Uses navigator.userAgent for detection and provides safe fallback for SSR environments.
+
+### EasterEggUtil
+
+- `generateHappy(message?: string): string` - Displays encouraging messages to developers in the console with colorful styling and timestamps. Randomly selects from 10 motivational default messages or displays a custom message if provided. Returns the message text. Perfect for adding positivity to development workflows, celebrating test success, or boosting morale during debugging sessions.
 
 ### CookieUtil
 
