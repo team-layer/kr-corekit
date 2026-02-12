@@ -9,6 +9,7 @@ export * as searchQueryUtil from "./searchQueryUtil";
 export * as typeUtil from "./typeUtil";
 export * as formatUtil from "./formatUtil";
 export * as deviceUtil from "./deviceUtil";
+export * as easterEggUtil from "./easterEggUtil";
 
 // 개별 함수에 대한 익스포트 진행
 export * from "./stringUtil";
@@ -21,3 +22,4 @@ export * from "./searchQueryUtil";
 export * from "./typeUtil";
 export * from "./formatUtil";
 export * from "./deviceUtil";
+export * from "./easterEggUtil";
