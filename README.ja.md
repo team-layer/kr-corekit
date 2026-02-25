@@ -2,7 +2,7 @@
 
 言語: [English](./README.md) | [한국어](./README.ko.md) | [简体中文](./README.zh-CN.md) | [日本語](./README.ja.md)
 
-lodash/es-toolkit 風の API を目指した JavaScript/TypeScript ユーティリティライブラリです。
+明確で実用的な API 設計を重視した JavaScript/TypeScript ユーティリティライブラリです。
 
 ## 特徴
 

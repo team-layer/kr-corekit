@@ -2,7 +2,7 @@
 
 Language: [English](./README.md) | [한국어](./README.ko.md) | [简体中文](./README.zh-CN.md) | [日本語](./README.ja.md)
 
-A utility toolkit for JavaScript and TypeScript inspired by lodash/es-toolkit style APIs.
+A utility toolkit for JavaScript and TypeScript built with a clear, practical API design.
 
 ## Highlights
 

@@ -2,7 +2,7 @@
 
 语言: [English](./README.md) | [한국어](./README.ko.md) | [简体中文](./README.zh-CN.md) | [日本語](./README.ja.md)
 
-一个面向 JavaScript/TypeScript 的工具函数库，API 风格参考 lodash/es-toolkit。
+一个为 JavaScript/TypeScript 打造的工具函数库，强调清晰且实用的 API 设计。
 
 ## 主要特性
 
