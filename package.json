@@ -35,20 +35,55 @@
       "require": "./dist/types/stringUtil/index.js",
       "import": "./dist/types/stringUtil/index.js"
     },
+    "./arrayUtil": {
+      "types": "./dist/types/arrayUtil/index.d.ts",
+      "require": "./dist/types/arrayUtil/index.js",
+      "import": "./dist/types/arrayUtil/index.js"
+    },
+    "./collectionUtil": {
+      "types": "./dist/types/collectionUtil/index.d.ts",
+      "require": "./dist/types/collectionUtil/index.js",
+      "import": "./dist/types/collectionUtil/index.js"
+    },
     "./objectUtil": {
       "types": "./dist/types/objectUtil/index.d.ts",
       "require": "./dist/types/objectUtil/index.js",
       "import": "./dist/types/objectUtil/index.js"
+    },
+    "./asyncUtil": {
+      "types": "./dist/types/asyncUtil/index.d.ts",
+      "require": "./dist/types/asyncUtil/index.js",
+      "import": "./dist/types/asyncUtil/index.js"
     },
     "./cookieUtil": {
       "types": "./dist/types/cookieUtil/index.d.ts",
       "require": "./dist/types/cookieUtil/index.js",
       "import": "./dist/types/cookieUtil/index.js"
     },
+    "./dateUtil": {
+      "types": "./dist/types/dateUtil/index.d.ts",
+      "require": "./dist/types/dateUtil/index.js",
+      "import": "./dist/types/dateUtil/index.js"
+    },
+    "./langUtil": {
+      "types": "./dist/types/langUtil/index.d.ts",
+      "require": "./dist/types/langUtil/index.js",
+      "import": "./dist/types/langUtil/index.js"
+    },
+    "./mathUtil": {
+      "types": "./dist/types/mathUtil/index.d.ts",
+      "require": "./dist/types/mathUtil/index.js",
+      "import": "./dist/types/mathUtil/index.js"
+    },
     "./numberUtil": {
       "types": "./dist/types/numberUtil/index.d.ts",
       "require": "./dist/types/numberUtil/index.js",
       "import": "./dist/types/numberUtil/index.js"
+    },
+    "./promiseUtil": {
+      "types": "./dist/types/promiseUtil/index.d.ts",
+      "require": "./dist/types/promiseUtil/index.js",
+      "import": "./dist/types/promiseUtil/index.js"
     },
     "./validationUtil": {
       "types": "./dist/types/validationUtil/index.d.ts",
@@ -59,6 +94,11 @@
       "types": "./dist/types/commonUtil/index.d.ts",
       "require": "./dist/types/commonUtil/index.js",
       "import": "./dist/types/commonUtil/index.js"
+    },
+    "./functionUtil": {
+      "types": "./dist/types/functionUtil/index.d.ts",
+      "require": "./dist/types/functionUtil/index.js",
+      "import": "./dist/types/functionUtil/index.js"
     },
     "./searchQueryUtil": {
       "types": "./dist/types/searchQueryUtil/index.d.ts",

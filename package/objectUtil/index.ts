@@ -1,3 +1,13 @@
 export { default as clearNullProperties } from "./clearNullProperties";
+export { default as defaults } from "./defaults";
+export { default as deepClone } from "./deepClone";
 export { default as deepFreeze } from "./deepFreeze";
+export { default as get } from "./get";
+export { default as has } from "./has";
+export { default as invert } from "./invert";
+export { default as mapValues } from "./mapValues";
+export { default as merge } from "./merge";
+export { default as omit } from "./omit";
+export { default as pick } from "./pick";
 export { default as removeKey } from "./removeKey";
+export { default as set } from "./set";

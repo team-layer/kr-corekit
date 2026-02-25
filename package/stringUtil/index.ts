@@ -1,3 +1,9 @@
+export { default as camelCase } from "./camelCase";
+export { default as capitalize } from "./capitalize";
 export { default as escapeHtml } from "./escapeHtml";
-export { default as unescapeHtml } from "./unescapeHtml";
+export { default as kebabCase } from "./kebabCase";
+export { default as pascalCase } from "./pascalCase";
 export { default as slugify } from "./slugify";
+export { default as snakeCase } from "./snakeCase";
+export { default as truncate } from "./truncate";
+export { default as unescapeHtml } from "./unescapeHtml";
