@@ -71,6 +71,10 @@ import { mapAsync } from "kr-corekit/asyncUtil";
 import { withTimeout } from "kr-corekit/promiseUtil";
 ```
 
+## Full API Examples
+
+- See [`docs/API_EXAMPLES.md`](./docs/API_EXAMPLES.md) for examples of all public APIs.
+
 ## Benchmark
 
 ```bash

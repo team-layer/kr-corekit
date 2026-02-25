@@ -71,6 +71,10 @@ import { mapAsync } from "kr-corekit/asyncUtil";
 import { withTimeout } from "kr-corekit/promiseUtil";
 ```
 
+## 完整 API 示例
+
+- 所有公开 API 的示例请查看 [`docs/API_EXAMPLES.md`](./docs/API_EXAMPLES.md)。
+
 ## 基准测试
 
 ```bash

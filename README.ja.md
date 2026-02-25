@@ -71,6 +71,10 @@ import { mapAsync } from "kr-corekit/asyncUtil";
 import { withTimeout } from "kr-corekit/promiseUtil";
 ```
 
+## 全 API サンプル
+
+- 公開 API の全サンプルは [`docs/API_EXAMPLES.md`](./docs/API_EXAMPLES.md) を参照してください。
+
 ## ベンチマーク
 
 ```bash
