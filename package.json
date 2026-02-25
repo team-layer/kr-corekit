@@ -123,6 +123,7 @@
   },
   "scripts": {
     "build": "tsc && vite build",
+    "benchmark": "npm run build && node benchmark/index.mjs",
     "build:analyze": "npm run build && npm run analyze:bundle",
     "analyze:bundle": "echo 'Bundle Analysis:' && du -h dist/bundle/* && echo '\\nGzipped sizes:' && gzip -c dist/bundle/kr-corekit.js | wc -c | awk '{print \"ESM: \" $1/1024 \" KB\"}' && gzip -c dist/bundle/kr-corekit.cjs | wc -c | awk '{print \"CJS: \" $1/1024 \" KB\"}'",
     "pack:preview": "npm pack --dry-run",
