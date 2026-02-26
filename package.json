@@ -1,6 +1,6 @@
 {
   "name": "kr-corekit",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "A lightweight and modern utility toolkit for JavaScript and TypeScript. kr-corekit provides essential functions for strings, arrays, objects, and more, designed for simplicity and productivity.",
   "keywords": [
     "javascript",
