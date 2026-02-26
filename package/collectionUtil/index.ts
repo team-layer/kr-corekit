@@ -1,0 +1,12 @@
+export { default as entries } from "./entries";
+export { default as every } from "./every";
+export { default as filter } from "./filter";
+export { default as find } from "./find";
+export { default as forEach } from "./forEach";
+export { default as includes } from "./includes";
+export { default as keys } from "./keys";
+export { default as map } from "./map";
+export { default as reduce } from "./reduce";
+export { default as size } from "./size";
+export { default as some } from "./some";
+export { default as values } from "./values";

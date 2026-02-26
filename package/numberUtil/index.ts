@@ -1,3 +1,9 @@
-export { default as sum } from "./sum";
-export { default as subtract } from "./subtract";
+export { default as ceil } from "./ceil";
+export { default as clamp } from "./clamp";
+export { default as floor } from "./floor";
+export { default as inRange } from "./inRange";
 export { default as multiply } from "./multiply";
+export { default as random } from "./random";
+export { default as round } from "./round";
+export { default as subtract } from "./subtract";
+export { default as sum } from "./sum";
